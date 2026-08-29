@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=0.8">
+  <title>ssi.8</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+<body>
+  <div id="wrapper">
+<table class="head">
+  <tr>
+    <td class="head-ltitle">SSI(8)</td>
+    <td class="head-vol">System Manager's Manual (smm)</td>
+    <td class="head-rtitle">SSI(8)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" title="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+<code class="Nm" title="Nm">ssi</code> &#x2014;
+<div class="Nd" title="Nd">Server-Side-Includes CGI program</div>
+<h1 class="Sh" title="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<table class="Nm">
+  <tr>
+    <td><code class="Nm" title="Nm">ssi</code></td>
+    <td></td>
+  </tr>
+</table>
+<h1 class="Sh" title="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+This is an external CGI program that provides the same functionality as the
+  built-in server-side-includes feature in many HTTP daemons. It is written for
+  use with <a class="Xr" title="Xr">thttpd(8)</a> and
+  <a class="Xr" title="Xr">merecat(8)</a>, but should be easy to adapt to other
+  systems.
+<div class="Pp"></div>
+There are two ways to use this; the modern way of using a
+  <code class="Cm" title="Cm">.shtml</code> pattern in
+  <a class="Xr" title="Xr">merecat.conf(5)</a> to trigger the SSI script, which
+  requires enabling the SSI module. Then there is the traditional
+  <a class="Xr" title="Xr">thttpd(8)</a> approach. We start with the relevant
+  settings needed in <code class="Nm" title="Nm">merecat.conf</code>:
+<div class="Pp"></div>
+<div class="Bd Bd-indent">
+<pre class="Li">
+ssi { 
+    enabled = true 
+    pattern = &quot;**.shtml&quot;	# default 
+    cgi-path = &quot;cgi-bin/ssi&quot;    # default, web server root is used 
+}
+</pre>
+</div>
+<div class="Pp"></div>
+The traditional <code class="Nm" title="Nm">thttpd</code> way runs ssi as a
+  simple CGI script, which requires placing the ssi binary in the web server CGI
+  area, and enabling CGI. Then set up URLs with the path to the document to
+  parse as the &quot;pathinfo&quot;. That's the part of the URL that comes after
+  the CGI program name. For example, if the URL to this program is:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+
+    http://www.acme.com/cgi-bin/ssi 
+
+</pre>
+</div>
+and the url for the document is:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+
+    http://www.acme.com/users/wecoyote/doc.html 
+
+</pre>
+</div>
+then the compound URL would be:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+
+    http://www.acme.com/cgi-bin/ssi/users/wecoyote/doc.html 
+
+</pre>
+</div>
+<h1 class="Sh" title="Sh" id="INCLUDE_FORMAT"><a class="permalink" href="#INCLUDE_FORMAT">INCLUDE
+  FORMAT</a></h1>
+The format description below is adapted from
+  &#x27E8;http://hoohoo.ncsa.uiuc.edu/docs/tutorials/includes.html&#x27E9;.
+<div class="Pp"></div>
+All directives are formatted as SGML comments within the document. This is in
+  case the document should ever find itself in the client's hands unparsed. Each
+  directive has the following format:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+
+    &lt;!--#command tag1=&quot;value1&quot; tag2=&quot;value2&quot; --&gt; 
+
+</pre>
+</div>
+<i class="Em" title="Em">Note:</i> the lack of space between the initial HTML
+  comment start and the #command. This is explicitly stated in the standard and
+  strictly enforced by all web servers implementing SSI.
+<div class="Pp"></div>
+Each command takes different arguments, most only accept one tag at a time. Here
+  is a breakdown of the commands and their associated tags:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#config"><code class="Cm" title="Cm" id="config">config</code></a></dt>
+  <dd>The config directive controls various aspects of the file parsing. There
+      are two valid tags:
+    <dl class="Bl-tag">
+      <dt><a class="permalink" href="#timefmt"><code class="Cm" title="Cm" id="timefmt">timefmt</code></a></dt>
+      <dd>gives the server a new format to use when providing dates. This is a
+          string compatible with the <a class="Xr" title="Xr">strftime(3)</a>
+          library call.</dd>
+      <dt><a class="permalink" href="#sizefmt"><code class="Cm" title="Cm" id="sizefmt">sizefmt</code></a></dt>
+      <dd>determines the formatting to be used when displaying the size of a
+          file. Valid choices are bytes, for a formatted byte count (formatted
+          as 1,234,567), or abbrev for an abbreviated version displaying the
+          number of kilobytes or megabytes the file occupies.</dd>
+      <dt><a class="permalink" href="#errmsg"><code class="Cm" title="Cm" id="errmsg">errmsg</code></a></dt>
+      <dd>overrides the default; &#x201C;[an error occurred while processing
+          this directive]&#x201D;</dd>
+    </dl>
+  </dd>
+  <dt><a class="permalink" href="#include"><code class="Cm" title="Cm" id="include">include</code></a></dt>
+  <dd>Inserts the text of another document into the parsed document. The
+      inserted file is parsed recursively, so it can contain server-side-include
+      directives too. This command accepts two tags:
+    <dl class="Bl-tag">
+      <dt><a class="permalink" href="#virtual"><code class="Cm" title="Cm" id="virtual">virtual</code></a></dt>
+      <dd>Gives a virtual path to a document on the server.</dd>
+      <dt><a class="permalink" href="#file"><code class="Cm" title="Cm" id="file">file</code></a></dt>
+      <dd>Gives a pathname relative to the current directory. ../ cannot be used
+          in this pathname, nor can absolute paths be used.</dd>
+    </dl>
+  </dd>
+  <dt><a class="permalink" href="#echo"><code class="Cm" title="Cm" id="echo">echo</code></a></dt>
+  <dd>Prints the value of one of the include variables (defined below). Any
+      dates are printed subject to the currently configured timefmt. The only
+      valid tag to this command is var, whose value is the name of the variable
+      you wish to echo.</dd>
+  <dt><a class="permalink" href="#fsize"><code class="Cm" title="Cm" id="fsize">fsize</code></a></dt>
+  <dd>prints the size of the specified file, subject to the sizefmt parameter to
+      the config command. Valid tags are the same as with the include
+    command.</dd>
+  <dt><a class="permalink" href="#flastmod"><code class="Cm" title="Cm" id="flastmod">flastmod</code></a></dt>
+  <dd>prints the last modification date of the specified file, subject to the
+      formatting preference given by the timefmt parameter to config. Valid tags
+      are the same as with the include command.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="VARIABLES"><a class="permalink" href="#VARIABLES">VARIABLES</a></h1>
+A number of variables are made available to parsed documents. In addition to the
+  CGI variable set, the following variables are made available:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#DOCUMENT_NAME"><code class="Cm" title="Cm" id="DOCUMENT_NAME">DOCUMENT_NAME</code></a></dt>
+  <dd>The current filename.</dd>
+  <dt><a class="permalink" href="#DOCUMENT_URI"><code class="Cm" title="Cm" id="DOCUMENT_URI">DOCUMENT_URI</code></a></dt>
+  <dd>The virtual path to this document (such as /~robm/foo.shtml).</dd>
+  <dt><a class="permalink" href="#QUERY_STRING_UNESCAPED"><code class="Cm" title="Cm" id="QUERY_STRING_UNESCAPED">QUERY_STRING_UNESCAPED</code></a></dt>
+  <dd>The unescaped version of any search query the client sent.</dd>
+  <dt><a class="permalink" href="#DATE_LOCAL"><code class="Cm" title="Cm" id="DATE_LOCAL">DATE_LOCAL</code></a></dt>
+  <dd>The current date, local time zone. Subject to the timefmt parameter to the
+      config command.</dd>
+  <dt><a class="permalink" href="#DATE_GMT"><code class="Cm" title="Cm" id="DATE_GMT">DATE_GMT</code></a></dt>
+  <dd>Same as <code class="Cm" title="Cm">DATE_LOCAL</code> but in Greenwich
+      mean time (GMT).</dd>
+  <dt><a class="permalink" href="#LAST_MODIFIED"><code class="Cm" title="Cm" id="LAST_MODIFIED">LAST_MODIFIED</code></a></dt>
+  <dd>The last modification date of the current document. Subject to timefmt
+      like the others.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+<a class="Xr" title="Xr">merecat(8)</a>,
+  <a class="Xr" title="Xr">merecat.conf(5)</a>,
+  <a class="Xr" title="Xr">strftime(3)</a>
+<h1 class="Sh" title="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+<br/>
+<span class="An" title="An">Jef Poskanzer</span>
+  &#x27E8;jef@mail.acme.com&#x27E9; wrote the original for use with
+  <code class="Nm" title="Nm">thttpd</code>.
+<br/>
+<span class="An" title="An">Joachim Wiberg</span>
+  &#x27E8;troglobit@gmail.com&#x27E9; added minor features and a trigger in
+  <code class="Nm" title="Nm">merecat</code> for
+  <code class="Cm" title="Cm">.shtml</code> pages.
+<h1 class="Sh" title="Sh" id="BUGS"><a class="permalink" href="#BUGS">BUGS</a></h1>
+Does not implement all &quot;modern&quot; SSI directives are supported. E.g.,
+  <code class="Cm" title="Cm">exec cgi</code> and
+  <code class="Cm" title="Cm">exec cmd</code> or any control directives like
+  <code class="Cm" title="Cm">if, elif, else, endif,</code> etc. Patches and
+  pull-requests are welcome :)</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">August 3, 2019</td>
+    <td class="foot-os">merecat (2.32)</td>
+  </tr>
+</table>
+    <div id="footer">
+      <address><a href="https://github.com/troglobit/merecat/">merecat
+	  httpd</a> is free software under
+	  the <a href="https://en.wikipedia.org/wiki/BSD_licenses#2-clause_license_.28.22Simplified_BSD_License.22_or_.22FreeBSD_License.22.29">2-clause
+	  BSD license</a>.
+      </address>
+    </div>
+  </div>
+</body>
+</html>

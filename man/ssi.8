@@ -1,0 +1,193 @@
+.\"                                                              -*- nroff -*-
+.\" The Merecat web server stems from both sthttpd and thttpd, both of
+.\" which are free software under the 2-clause simplified BSD license.
+.\"
+.\" Copyright (c) 1995-2015  Jef Poskanzer <jef@mail.acme.com>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+.\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNERS OR CONTRIBUTORS BE
+.\" LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+.\" THE POSSIBILITY OF SUCH DAMAGE.
+.Dd Aug 3, 2019
+.Dt SSI 8 SMM
+.Os "merecat (2.32)"
+.Sh NAME
+.Nm ssi
+.Nd Server-Side-Includes CGI program
+.Sh SYNOPSIS
+.Nm
+.Sh DESCRIPTION
+This is an external CGI program that provides the same functionality as
+the built-in server-side-includes feature in many HTTP daemons.  It is
+written for use with
+.Xr thttpd 8
+and
+.Xr merecat 8 ,
+but should be easy to adapt to other systems.
+.Pp
+There are two ways to use this; the modern way of using a
+.Cm .shtml
+pattern in
+.Xr merecat.conf 5
+to trigger the SSI script, which requires enabling the SSI module.  Then
+there is the traditional
+.Xr thttpd 8
+approach.  We start with the relevant settings needed in
+.Nm merecat.conf :
+.Bd -literal -offset indent
+ssi {
+    enabled = true
+    pattern = "**.shtml"	# default
+    cgi-path = "cgi-bin/ssi"    # default, web server root is used
+}
+.Ed
+.Pp
+The traditional
+.Nm thttpd
+way runs ssi as a simple CGI script, which requires placing the ssi
+binary in the web server CGI area, and enabling CGI.  Then set up URLs
+with the path to the document to parse as the "pathinfo".  That's the
+part of the URL that comes after the CGI program name.  For example, if
+the URL to this program is:
+.Bd -unfilled -offset left
+
+    http://www.acme.com/cgi-bin/ssi
+
+.Ed
+and the url for the document is:
+.Bd -unfilled -offset left
+
+    http://www.acme.com/users/wecoyote/doc.html
+
+.Ed
+then the compound URL would be:
+.Bd -unfilled -offset left
+
+    http://www.acme.com/cgi-bin/ssi/users/wecoyote/doc.html
+
+.Ed
+.Sh INCLUDE FORMAT
+The format description below is adapted from
+.Aq http://hoohoo.ncsa.uiuc.edu/docs/tutorials/includes.html .
+.Pp
+All directives are formatted as SGML comments within the document.  This
+is in case the document should ever find itself in the client's hands
+unparsed.  Each directive has the following format:
+.Bd -unfilled -offset left
+
+    <!--#command tag1="value1" tag2="value2" -->
+
+.Ed
+.Em Note:
+the lack of space between the initial HTML comment start and the
+#command.  This is explicitly stated in the standard and strictly
+enforced by all web servers implementing SSI.
+.Pp
+Each command takes different arguments, most only accept one tag at a
+time.  Here is a breakdown of the commands and their associated tags:
+.Bl -tag -width Ds
+.It Cm config
+The config directive controls various aspects of the file parsing.
+There are two valid tags:
+.Bl -tag -width Ds
+.It Cm timefmt
+gives the server a new format to use when providing dates.  This is a
+string compatible with the
+.Xr strftime 3
+library call.
+.It Cm sizefmt
+determines the formatting to be used when displaying the size of a file.
+Valid choices are bytes, for a formatted byte count (formatted as
+1,234,567), or abbrev for an abbreviated version displaying the number
+of kilobytes or megabytes the file occupies.
+.It Cm errmsg
+overrides the default;
+.Qq [an error occurred while processing this directive]
+.El
+.It Cm include
+Inserts the text of another document into the parsed document.  The
+inserted file is parsed recursively, so it can contain
+server-side-include directives too.  This command accepts two tags:
+.Bl -tag -width Ds
+.It Cm virtual
+Gives a virtual path to a document on the server.
+.It Cm file
+Gives a pathname relative to the current directory. ../ cannot be used
+in this pathname, nor can absolute paths be used.
+.El
+.It Cm echo
+Prints the value of one of the include variables (defined below).  Any
+dates are printed subject to the currently configured timefmt.  The only
+valid tag to this command is var, whose value is the name of the
+variable you wish to echo.
+.It Cm fsize
+prints the size of the specified file, subject to the sizefmt parameter
+to the config command.  Valid tags are the same as with the include
+command.
+.It Cm flastmod
+prints the last modification date of the specified file, subject to the
+formatting preference given by the timefmt parameter to config.  Valid
+tags are the same as with the include command.
+.El
+.Sh VARIABLES
+A number of variables are made available to parsed documents.  In
+addition to the CGI variable set, the following variables are made
+available:
+.Bl -tag -width Ds
+.It Cm DOCUMENT_NAME
+The current filename.
+.It Cm DOCUMENT_URI
+The virtual path to this document (such as /~robm/foo.shtml).
+.It Cm QUERY_STRING_UNESCAPED
+The unescaped version of any search query the client sent.
+.It Cm DATE_LOCAL
+The current date, local time zone.  Subject to the timefmt parameter to
+the config command.
+.It Cm DATE_GMT
+Same as
+.Cm DATE_LOCAL
+but in Greenwich mean time (GMT).
+.It Cm LAST_MODIFIED
+The last modification date of the current document.  Subject to timefmt
+like the others.
+.El
+.Sh SEE ALSO
+.Xr merecat 8 ,
+.Xr merecat.conf 5 ,
+.Xr strftime 3
+.Sh AUTHORS
+.An -split
+.An Jef Poskanzer Aq jef@mail.acme.com
+wrote the original for use with
+.Nm thttpd .
+.An Joachim Wiberg Aq troglobit@gmail.com
+added minor features and a trigger in
+.Nm merecat
+for
+.Cm .shtml
+pages.
+.Sh BUGS
+Does not implement all "modern" SSI directives are supported. E.g.,
+.Cm exec cgi
+and
+.Cm exec cmd
+or any control directives like
+.Cm if, elif, else, endif,
+etc.  Patches and pull-requests are welcome :)

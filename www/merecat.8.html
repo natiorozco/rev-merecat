@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name=viewport content="width=device-width, initial-scale=0.8">
+  <title>merecat.8</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+</head>
+<body>
+  <div id="wrapper">
+<table class="head">
+  <tr>
+    <td class="head-ltitle">MERECAT(8)</td>
+    <td class="head-vol">System Manager's Manual (smm)</td>
+    <td class="head-rtitle">MERECAT(8)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" title="Sh" id="NAME"><a class="permalink" href="#NAME">NAME</a></h1>
+<code class="Nm" title="Nm">merecat</code> &#x2014;
+<div class="Nd" title="Nd">Simple, small and fast HTTP server</div>
+<h1 class="Sh" title="Sh" id="SYNOPSIS"><a class="permalink" href="#SYNOPSIS">SYNOPSIS</a></h1>
+<table class="Nm">
+  <tr>
+    <td><code class="Nm" title="Nm">merecat</code></td>
+    <td>[<div class="Op"><code class="Fl" title="Fl">-ghnrsSvV</code></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-c</code>
+      <var class="Ar" title="Ar">CGI</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-d</code>
+      <var class="Ar" title="Ar">PATH</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-f</code>
+      <var class="Ar" title="Ar">FILE</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-I</code>
+      <var class="Ar" title="Ar">IDENT</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-l</code>
+      <var class="Ar" title="Ar">LEVEL</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-p</code>
+      <var class="Ar" title="Ar">PORT</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-P</code>
+      <var class="Ar" title="Ar">PIDFN</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-t</code>
+      <var class="Ar" title="Ar">FILE</var></div>]
+      [<div class="Op"><code class="Fl" title="Fl">-u</code>
+      <var class="Ar" title="Ar">USER</var></div>]
+      [<div class="Op"><var class="Ar" title="Ar">WEBDIR</var></div>]
+      [<div class="Op"><var class="Ar" title="Ar">HOSTNAME</var></div>]</td>
+  </tr>
+</table>
+<h1 class="Sh" title="Sh" id="DESCRIPTION"><a class="permalink" href="#DESCRIPTION">DESCRIPTION</a></h1>
+<code class="Nm" title="Nm">merecat</code> started out as a pun at Mongoose,
+  which is another great web server, but is now useful for actual web serving
+  purposes. It is however not a real Meerkat, merely yet another copycat, forked
+  from the great <code class="Nm" title="Nm">thttpd</code> created by Jef
+  Poskanzer.
+<div class="Pp"></div>
+The limited feature set makes Merecat very quick:
+<div class="Pp"></div>
+<ul class="Bl-dash Bd-indent Bl-compac">
+  <li>Virtual hosts</li>
+  <li>URL-traffic-based throttling</li>
+  <li>CGI/1.1</li>
+  <li>HTTP/1.1 Keep-alive</li>
+  <li>Built-in gzip deflate using zlib</li>
+  <li>HTTPS support using OpenSSL/LibreSSL</li>
+  <li>Dual server support, both HTTP/HTTPS from one process</li>
+  <li>HTTP redirect support, per server. E.g., possible to redirect from HTTP to
+      HTTPS. Limited set of Nginx style environment variables supported.</li>
+  <li>Native PHP support, using php-cgi, if enabled in
+      <a class="Xr" title="Xr">merecat.conf(5)</a></li>
+</ul>
+<div class="Pp"></div>
+The resulting footprint (~140 kiB) makes Merecat suitable for small and embedded
+  systems.
+<h1 class="Sh" title="Sh" id="OPTIONS"><a class="permalink" href="#OPTIONS">OPTIONS</a></h1>
+This program follows the usual UNIX command line syntax. Some options are,
+  however, not available when <code class="Nm" title="Nm">merecat</code> is
+  built with support for <span class="Pa" title="Pa">/etc/merecat.conf</span>.
+  The distributed archive comes with an example configuration file, which should
+  be fairly straightforward to comprehend. For details on the available
+  configuration directives, see <a class="Xr" title="Xr">merecat.conf(5)</a>.
+<div class="Pp"></div>
+The options, in their entirety, are as follows:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#c"><code class="Fl" title="Fl" id="c">-c</code></a>
+    <var class="Ar" title="Ar">CGI</var></dt>
+  <dd>Wildcard pattern for CGI programs. The config file setting for this flag
+      is <code class="Cm" title="Cm">cgi-pattern =</code>
+      <var class="Ar" title="Ar">PATTERN</var>. The default is
+      &#x201C;<var class="Ar" title="Ar">**.cgi|/cgi-bin/*</var>&#x201D;.
+    <div class="Pp"></div>
+    For more details, see below.</dd>
+  <dt><a class="permalink" href="#d"><code class="Fl" title="Fl" id="d">-d</code></a>
+    <var class="Ar" title="Ar">PATH</var></dt>
+  <dd>Directory to chdir() to after chrooting. If you are not chrooting use the
+      <var class="Ar" title="Ar">WEBDIR</var> to do a single chdir(). If you are
+      chrooting, this lets you put the web files in a subdirectory of the chroot
+      tree, instead of in the top level mixed in with the chroot files. The
+      config file setting for this flag is
+      <code class="Cm" title="Cm">data-directory =</code>
+      <var class="Ar" title="Ar">DIR</var>.</dd>
+  <dt><a class="permalink" href="#f"><code class="Fl" title="Fl" id="f">-f</code></a>
+    <var class="Ar" title="Ar">FILE</var></dt>
+  <dd>The config file to read. By default
+      <code class="Nm" title="Nm">merecat</code> looks for
+      <span class="Pa" title="Pa">/etc/merecat.conf</span>, unless the software
+      has been configured to use a different prefix.</dd>
+  <dt><a class="permalink" href="#g"><code class="Fl" title="Fl" id="g">-g</code></a></dt>
+  <dd>Use global <span class="Pa" title="Pa">.htpasswd</span> and
+      <span class="Pa" title="Pa">.htaccess</span> files. This means that every
+      file in the entire document tree is protected by a single
+      <span class="Pa" title="Pa">.htpasswd</span> or
+      <span class="Pa" title="Pa">.htaccess</span> file at the top of the tree.
+      Otherwise the semantics of the
+      <span class="Pa" title="Pa">.htpasswd</span> and
+      <span class="Pa" title="Pa">.htaccess</span> files are the same. If this
+      option is set but there is no <span class="Pa" title="Pa">.htpasswd</span>
+      or <span class="Pa" title="Pa">.htaccess</span> files in the top-level
+      directory, then <code class="Nm" title="Nm">merecat</code> proceeds as if
+      the option was not set &#x2014; first looking for local
+      <span class="Pa" title="Pa">.htpasswd</span> and
+      <span class="Pa" title="Pa">.htaccess</span> files, and if they do not
+      exist either then serving the requested file without any password or
+      access restriction.
+    <div class="Pp"></div>
+    The config file setting for this flag is
+      <code class="Cm" title="Cm">global-passwd =</code>
+      <var class="Ar" title="Ar">&lt;true</var> |
+      <var class="Ar" title="Ar">false&gt;</var>.</dd>
+  <dt><a class="permalink" href="#I"><code class="Fl" title="Fl" id="I">-I</code></a>
+    <var class="Ar" title="Ar">IDENT</var></dt>
+  <dd>The <a class="Xr" title="Xr">syslog(3)</a> identity to use for all log
+      messages. Useful when running multiple servers. Defaults to use the
+      program name, i.e.
+      &#x201C;<code class="Nm" title="Nm">merecat</code>&#x201D;.</dd>
+  <dt><a class="permalink" href="#l"><code class="Fl" title="Fl" id="l">-l</code></a>
+    <var class="Ar" title="Ar">LEVEL</var></dt>
+  <dd>Set log level: none, err, info, <var class="Ar" title="Ar">notice</var>,
+      debug</dd>
+  <dt><a class="permalink" href="#n"><code class="Fl" title="Fl" id="n">-n</code></a></dt>
+  <dd>Runs <code class="Nm" title="Nm">merecat</code> in the foreground like a
+      regular program. Required when when running in a process monitor like
+      Finit or systemd. This also enables logging of errors and warnings to
+      stderr, which can be disabled with
+    <code class="Fl" title="Fl">-s</code>.</dd>
+  <dt><a class="permalink" href="#p"><code class="Fl" title="Fl" id="p">-p</code></a>
+    <var class="Ar" title="Ar">PORT</var></dt>
+  <dd>Alternate TCP port number to listen on. The default is 80. The config file
+      setting for this flag is <code class="Cm" title="Cm">port =</code>
+      <var class="Ar" title="Ar">PORT</var>.</dd>
+  <dt><a class="permalink" href="#P"><code class="Fl" title="Fl" id="P">-P</code></a>
+    <var class="Ar" title="Ar">PIDFN</var></dt>
+  <dd>Optional PID file name. By default the
+      <var class="Ar" title="Ar">IDENT</var> option, or its default value, is
+      used to construct the PID file name. Usually this results in
+      <span class="Pa" title="Pa">/var/run/merecat.pid</span>. If the argument
+      to this option is an absolute path it will be used as-is. Otherwise the
+      argument will be used as the basename for the PID file.</dd>
+  <dt><a class="permalink" href="#r"><code class="Fl" title="Fl" id="r">-r</code></a></dt>
+  <dd>Do a chroot() at initialization time, restricting file access to the
+      program's current directory. The config file setting for this flag is
+      <code class="Cm" title="Cm">chroot =</code>
+      <var class="Ar" title="Ar">&lt;true</var> |
+      <var class="Ar" title="Ar">false&gt;</var>.</dd>
+  <dt><a class="permalink" href="#s"><code class="Fl" title="Fl" id="s">-s</code></a></dt>
+  <dd>Use syslog, even though running in foreground,
+      <code class="Fl" title="Fl">-n</code>.
+      <code class="Nm" title="Nm">merecat</code> uses syslog by default, this
+      option is only relevant when running in the foreground to prevent warning
+      and error messages to be printed to stderr.</dd>
+  <dt><a class="permalink" href="#S"><code class="Fl" title="Fl" id="S">-S</code></a></dt>
+  <dd>Do explicit symbolic link checking. Normally, merecat does not expand any
+      symbolic links in filenames. For increased security this option can be
+      enabled to check that the resulting path stays within the original
+      document tree. Note, that if you are using the chroot option, the symlink
+      checking is unnecessary and is turned off, so the safe way to save those
+      CPU cycles is to use chroot. The config file setting for this is
+      <code class="Cm" title="Cm">check-symlinks =</code>
+      <var class="Ar" title="Ar">&lt;true</var> |
+      <var class="Ar" title="Ar">false&gt;</var>.</dd>
+  <dt><a class="permalink" href="#t"><code class="Fl" title="Fl" id="t">-t</code></a>
+    <var class="Ar" title="Ar">FILE</var></dt>
+  <dd>Enable throttling using this file with throttle settings. See below for
+      details.</dd>
+  <dt><a class="permalink" href="#u"><code class="Fl" title="Fl" id="u">-u</code></a>
+    <var class="Ar" title="Ar">USERNAME</var></dt>
+  <dd>User to drop privileges to to after initialization when started as root.
+      The default is <var class="Ar" title="Ar">nobody</var>, on some systems
+      <var class="Ar" title="Ar">www-data</var> is preferred. The config file
+      setting for this flag is <code class="Cm" title="Cm">username =</code>
+      <var class="Ar" title="Ar">USER</var>.</dd>
+  <dt><a class="permalink" href="#v"><code class="Fl" title="Fl" id="v">-v</code></a></dt>
+  <dd>Do el-cheapo virtual hosting. The config file setting for this flag is
+      <code class="Cm" title="Cm">virtual-host =</code>
+      <var class="Ar" title="Ar">&lt;true</var> |
+      <var class="Ar" title="Ar">false&gt;</var>.</dd>
+  <dt><a class="permalink" href="#V"><code class="Fl" title="Fl" id="V">-V</code></a></dt>
+  <dd>Shows the current version info.</dd>
+  <dt><var class="Ar" title="Ar">WEBDIR</var></dt>
+  <dd>This optional argument is provided as a convenience &#x2014; by default
+      <code class="Nm" title="Nm">merecat</code> serves files from the current
+      directory. The config file setting for this is
+      <code class="Cm" title="Cm">directory =</code>
+      <var class="Ar" title="Ar">DIR</var>.</dd>
+  <dt><var class="Ar" title="Ar">HOSTNAME</var></dt>
+  <dd>A second optional command line argument can be given to specify the
+      hostname to bind to, for multihoming. The default is to bind to all
+      hostnames supported on the local machine. See below for details. The
+      config file setting for this flag is <code class="Cm" title="Cm">hostname
+      =</code> <var class="Ar" title="Ar">HOSTNAME</var>.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="CHROOT"><a class="permalink" href="#CHROOT">CHROOT</a></h1>
+chroot() is a system call that restricts the program's view of the filesystem to
+  the current directory and directories below it. It becomes impossible for
+  remote users to access any file outside of the initial directory. The
+  restriction is inherited by child processes, so CGI programs get it too. This
+  is a very strong security measure, and is recommended. The only downside is
+  that only root can call chroot(), so this means the program must be started as
+  root. However, the last thing it does during initialization is to give up root
+  access by becoming another user, so this is safe.
+<div class="Pp"></div>
+The program can also be compile-time configured to always do a chroot(), without
+  needing the -r flag.
+<div class="Pp"></div>
+Note that with some other web servers, such as NCSA httpd, setting up a
+  directory tree for use with chroot() is complicated, involving creating a
+  bunch of special directories and copying in various files. With merecat it's a
+  lot easier, all you have to do is make sure any shells, utilities, and config
+  files used by your CGI programs and scripts are available. If you have CGI
+  disabled, or if you make a policy that all CGI programs must be written in a
+  compiled language such as C and statically linked, then you probably don't
+  have to do any setup at all.
+<div class="Pp"></div>
+However, one thing you should do is tell syslogd about the chroot tree, so that
+  merecat can still generate syslog messages. Check your system's syslogd man
+  page for how to do this. In FreeBSD you would put something like this in
+  <span class="Pa" title="Pa">/etc/rc.conf</span>:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+
+    syslogd_flags=&quot;-l /usr/local/www/data/dev/log&quot; 
+
+</pre>
+</div>
+Substitute in your own chroot tree's pathname, of course. Don't worry about
+  creating the log socket, syslogd wants to do that itself. (You may need to
+  create the dev directory.) In Linux the flag is -a instead of -l, and there
+  may be other differences.
+<h1 class="Sh" title="Sh" id="CGI"><a class="permalink" href="#CGI">CGI</a></h1>
+Merecat httpd supports the CGI 1.1 spec.,
+  <a class="Lk" title="Lk" href="https://tools.ietf.org/html/rfc3875">https://tools.ietf.org/html/rfc3875</a>.
+<div class="Pp"></div>
+In order for a CGI program to be allowed to run, its name must match the pattern
+  specified either at compile time, on the command line, or in the config file.
+  This is a simple shell-style filename pattern. Use * to match any string not
+  including a slash, or ** to match any string including slashes, or ? to match
+  any single character. Multiple patterns separated by | can also be used. The
+  patterns get checked against the filename part of the incoming URL. Remember
+  to quote any wildcard characters so that the shell doesn't mess with them.
+<div class="Pp"></div>
+Restricting CGI programs to a single directory lets the site admin review them
+  for security holes, and is strongly recommended. If there are individual users
+  that you trust, you can enable their directories too using the pipe syntax,
+  e.g. &quot;|/jef/**&quot;.
+<div class="Pp"></div>
+To disable CGI as a security measure, either disable the default
+  <code class="Cm" title="Cm">CGI_PATTERN</code> in
+  <span class="Pa" title="Pa">merecat.h</span>, or set the configuration file
+  option to the empty string, like this: <code class="Cm" title="Cm">cgi-pattern
+  =</code> &#x201C;&#x201D;
+<div class="Pp"></div>
+Note: the current working directory when a CGI program gets run is the directory
+  that the CGI program lives in. This isn't in the CGI 1.1 spec, but it's what
+  most other HTTP servers do.
+<div class="Pp"></div>
+Relevant <span class="Pa" title="Pa">merecat.h</span> defines:
+  <code class="Cm" title="Cm">CGI_PATTERN, CGI_TIMELIMIT, CGI_NICE, CGI_PATH,
+  CGI_LD_LIBRARY_PATH, CGIBINDIR</code>.
+<h1 class="Sh" title="Sh" id="BASIC_AUTHENTICATION"><a class="permalink" href="#BASIC_AUTHENTICATION">BASIC
+  AUTHENTICATION</a></h1>
+Basic authentication is available as an option at compile time. See the included
+  configure script for details. When enabled, it uses a password file in the
+  directory to be protected, called <span class="Pa" title="Pa">.htpasswd</span>
+  by default. This file is formatted as the familiar colon-separated
+  username/encrypted-password pair, records delimited by newlines. The utility
+  program <a class="Xr" title="Xr">htpasswd(1)</a> is included to help create
+  and modify <span class="Pa" title="Pa">.htpasswd</span> files.
+<div class="Pp"></div>
+<code class="Nm" title="Nm">merecat</code> can use a global
+  <span class="Pa" title="Pa">.htpasswd</span> file if started with the
+  <code class="Fl" title="Fl">-g</code> switch, or you can rely on a per
+  directory file which also protects subdirectories.
+<div class="Pp"></div>
+Relevant <span class="Pa" title="Pa">merecat.h</span> define:
+  <code class="Cm" title="Cm">AUTH_FILE</code>
+<h1 class="Sh" title="Sh" id="ACCESS_RESTRICTION"><a class="permalink" href="#ACCESS_RESTRICTION">ACCESS
+  RESTRICTION</a></h1>
+Access restriction is available as an option at compile time. If enabled, it
+  uses an access file in the directory to be protected, called
+  <span class="Pa" title="Pa">.htaccess</span> by default. This file consists of
+  a rule and a host address or a network range per line. Valid rules are:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#allow_from"><code class="Cm" title="Cm" id="allow_from">allow
+    from</code></a></dt>
+  <dd>The following host address or network range is allowed to access the
+      requested directory and its files.</dd>
+  <dt><a class="permalink" href="#deny_from"><code class="Cm" title="Cm" id="deny_from">deny
+    from</code></a></dt>
+  <dd>The following host address or network range is not allowed to access the
+      requested directory and its files.</dd>
+</dl>
+<div class="Pp"></div>
+There are three ways to specify a valid host address or network range:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#IPv4_host_address"><code class="Cm" title="Cm" id="IPv4_host_address">IPv4
+    host address</code></a>,</dt>
+  <dd>e.g. 10.2.3.4</dd>
+  <dt><a class="permalink" href="#IPv4_network_with_subnet_mask"><code class="Cm" title="Cm" id="IPv4_network_with_subnet_mask">IPv4
+    network with subnet mask</code></a>,</dt>
+  <dd>e.g. 10.0.0.0/255.255.0.0</dd>
+  <dt><a class="permalink" href="#IPv4_network_using_CIDR_notation"><code class="Cm" title="Cm" id="IPv4_network_using_CIDR_notation">IPv4
+    network using CIDR notation</code></a>,</dt>
+  <dd>e.g. 10.0.0.0/16</dd>
+</dl>
+<div class="Pp"></div>
+<code class="Nm" title="Nm">merecat</code> can use a global
+  <span class="Pa" title="Pa">.htaccess</span> file if started with the
+  <code class="Fl" title="Fl">-g</code> switch, or you can rely on a per
+  directory file which also protects subdirectories.
+<div class="Pp"></div>
+Note that rules are processed in the same order as they are listed in the access
+  file and that the first rule which matches the client's address is applied
+  (there is no order clause).
+<div class="Pp"></div>
+So if there is no allow from 0.0.0.0/0 at the end of the file the default action
+  is to deny access.
+<div class="Pp"></div>
+Relevant <span class="Pa" title="Pa">merecat.h</span> define:
+  <code class="Cm" title="Cm">ACCESS_FILE</code>
+<h1 class="Sh" title="Sh" id="THROTTLING"><a class="permalink" href="#THROTTLING">THROTTLING</a></h1>
+The throttle file lets you set maximum byte rates on URLs or URL groups. You can
+  optionally set a minimum rate too. The format of the throttle file is very
+  simple. A # starts a comment, and the rest of the line is ignored. Blank lines
+  are ignored. The rest of the lines should consist of a pattern, whitespace,
+  and a number. The pattern is a simple shell-style filename pattern, using
+  ?/**/*, or multiple such patterns separated by |.
+<div class="Pp"></div>
+The numbers in the file are byte rates, specified in units of bytes per second.
+  For comparison, a v.90 modem gives about 5000 B/s depending on compression, a
+  double-B-channel ISDN line about 12800 B/s, and a T1 line is about 150000 B/s.
+  If you want to set a minimum rate as well, use number-number.
+<div class="Pp"></div>
+Example:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  # throttle file for www.acme.com 
+ 
+  **              2000-100000  # limit total web usage to 2/3 of our T1, 
+                               # but never go below 2000 B/s 
+  **.jpg|**.gif   50000   # limit images to 1/3 of our T1 
+  **.mpg          20000   # and movies to even less 
+  jef/**          20000   # jef's pages are too popular
+</pre>
+</div>
+<div class="Pp"></div>
+Throttling is implemented by checking each incoming URL filename against all of
+  the patterns in the throttle file. The server accumulates statistics on how
+  much bandwidth each pattern has accounted for recently (via a rolling
+  average). If a URL matches a pattern that has been exceeding its specified
+  limit, then the data returned is actually slowed down, with pauses between
+  each block. If that's not possible (e.g. for CGI programs) or if the bandwidth
+  has gotten way larger than the limit, then the server returns a special code
+  saying &#x201C;try again later&#x201D;.
+<div class="Pp"></div>
+The minimum rates are implemented similarly. If too many people are trying to
+  fetch something at the same time, throttling may slow down each connection so
+  much that it's not really useable. Furthermore, all those slow connections
+  clog up the server, using up file handles and connection slots. Setting a
+  minimum rate says that past a certain point you should not even bother
+  &#x2014; the server returns the &#x201C;try again later&#x201D; code and the
+  connection is not even started.
+<div class="Pp"></div>
+There is no provision for setting a maximum connections/second throttle, because
+  throttling a request uses as much CPU as handling it, so there would be no
+  point. There is also no provision for throttling the number of simultaneous
+  connections on a per-URL basis. However you can control the overall number of
+  connections for the whole server very simply, by setting the operating
+  system's per-process file descriptor limit before starting merecat. Be sure to
+  set the hard limit, not the soft limit.
+<h1 class="Sh" title="Sh" id="MULTIHOMING"><a class="permalink" href="#MULTIHOMING">MULTIHOMING</a></h1>
+Multihoming means using one machine to serve multiple hostnames. For instance,
+  if you're an internet provider and you want to let all of your customers have
+  customized web addresses, you might have www.joe.acme.com, www.jane.acme.com,
+  and your own www.acme.com, all running on the same physical hardware. This
+  feature is also known as virtual hosts. There are three steps to setting this
+  up.
+<div class="Pp"></div>
+One, make DNS entries for all of the hostnames. The current way to do this,
+  allowed by HTTP/1.1, is to use CNAME aliases, like so:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  www.acme.com IN A 192.100.66.1 
+  www.joe.acme.com IN CNAME www.acme.com 
+  www.jane.acme.com IN CNAME www.acme.com
+</pre>
+</div>
+<div class="Pp"></div>
+However, this is incompatible with older HTTP/1.0 browsers. If you want to stay
+  compatible, there is a different way - use A records instead, each with a
+  different IP address, like so:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  www.acme.com IN A 192.100.66.1 
+  www.joe.acme.com IN A 192.100.66.200 
+  www.jane.acme.com IN A 192.100.66.201
+</pre>
+</div>
+<div class="Pp"></div>
+This is bad because it uses extra IP addresses, a somewhat scarce resource. But
+  if you want people with older browsers to be able to visit your sites, you
+  still have to do it this way.
+<div class="Pp"></div>
+Step two. If you're using the modern CNAME method of multihoming, then you can
+  skip this step. Otherwise, using the older multiple-IP-address method you must
+  set up IP aliases or multiple interfaces for the extra addresses. You can use
+  ifconfig(8)'s alias command to tell the machine to answer to all of the
+  different IP addresses. Example:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  ifconfig le0 www.acme.com 
+  ifconfig le0 www.joe.acme.com alias 
+  ifconfig le0 www.jane.acme.com alias
+</pre>
+</div>
+<div class="Pp"></div>
+If your OS's version of ifconfig doesn't have an alias command, you're probably
+  out of luck (but see
+  <a class="Lk" title="Lk" href="http://www.acme.com/software/thttpd/notes.html">http://www.acme.com/software/thttpd/notes.html</a>
+  for more info).
+<div class="Pp"></div>
+Third and last, you must set up merecat to handle the multiple hosts. The
+  easiest way is with the <code class="Fl" title="Fl">-v</code> flag. This works
+  with either CNAME multihosting or multiple-IP multihosting. What it does is
+  send each incoming request to a subdirectory based on the hostname it's
+  intended for. All you have to do in order to set things up is to create those
+  subdirectories in the directory where merecat will run. With the example
+  above, you'd do like so:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  mkdir www.acme.com www.joe.acme.com www.jane.acme.com
+</pre>
+</div>
+<div class="Pp"></div>
+If you're using old-style multiple-IP multihosting, you should also create
+  symbolic links from the numeric addresses to the names, like so:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  ln -s www.acme.com 192.100.66.1 
+  ln -s www.joe.acme.com 192.100.66.200 
+  ln -s www.jane.acme.com 192.100.66.201
+</pre>
+</div>
+<div class="Pp"></div>
+This lets the older HTTP/1.0 browsers find the right subdirectory.
+<div class="Pp"></div>
+There is an optional alternate step three if you're using multiple-IP
+  multihosting: run a separate merecat process for each hostname This gives you
+  more flexibility, since you can run each of these processes in separate
+  directories, with different throttle files, etc. Example:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  merecat -r         /usr/www      www.acme.com 
+  merecat -r -u joe  /usr/www/joe  www.joe.acme.com 
+  merecat -r -u jane /usr/www/jane www.jane.acme.com
+</pre>
+</div>
+<div class="Pp"></div>
+Remember, this multiple-process method does not work with CNAME multihosting
+  &#x2014; for that, you must use a single merecat process with the
+  <code class="Fl" title="Fl">-v</code> flag.
+<h1 class="Sh" title="Sh" id="CUSTOM_ERRORS"><a class="permalink" href="#CUSTOM_ERRORS">CUSTOM
+  ERRORS</a></h1>
+merecat lets you define your own custom error pages for the various HTTP errors.
+  There is a separate file for each error number, all stored in one special
+  directory. The directory name is <span class="Pa" title="Pa">errors/</span>,
+  at the top of the web directory tree. The error files should be named
+  <span class="Pa" title="Pa">errNNN.html</span>, where NNN is the error number.
+  So for example, to make a custom error page for the authentication failure
+  error, which is number 401, you would put your HTML into the file
+  <span class="Pa" title="Pa">errors/err401.html</span>. If no custom error file
+  is found for a given error number, then the usual built-in error page is
+  generated.
+<div class="Pp"></div>
+In a virtual hosts setup you can also have different custom error pages for each
+  host. In this case you put another <span class="Pa" title="Pa">errors/</span>
+  directory in the top of that virtual host's web tree.
+  <code class="Nm" title="Nm">merecat</code> will look first in the virtual host
+  errors directory, and then in the server-wide errors directory, and if neither
+  of those has an appropriate error file then it will generate the built-in
+  error.
+<h1 class="Sh" title="Sh" id="NON_LOCAL_REFERERS"><a class="permalink" href="#NON_LOCAL_REFERERS">NON-LOCAL
+  REFERERS</a></h1>
+Sometimes another site on the net will embed your image files in their HTML
+  files, which basically means they're stealing your bandwidth. You can prevent
+  them from doing this by using non-local referer filtering. With this option,
+  certain files can only be fetched via a local referer. The files have to be
+  referenced by a local web page. If a web page on some other site references
+  the files, that fetch will be blocked. There are three config file variables
+  for this feature:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#url-pattern_="><code class="Cm" title="Cm" id="url-pattern_=">url-pattern
+    =</code></a>
+    &#x201C;<var class="Ar" title="Ar">**.jpg|**.gif|**.au|**.wav</var>&#x201D;</dt>
+  <dd>A wildcard pattern for the URLs that should require a local referer. This
+      is typically just image files, sound files, and so on. For example:
+    <div class="Pp"></div>
+    <div class="Bd">
+    <pre class="Li">
+  urlpat = &quot;**.jpg|**.gif|**.au|**.wav&quot;
+    </pre>
+    </div>
+    <div class="Pp"></div>
+    For most sites, that one setting is all you need to enable referer
+      filtering.</dd>
+  <dt><a class="permalink" href="#check-referer_="><code class="Cm" title="Cm" id="check-referer_=">check-referer
+    =</code></a> <var class="Ar" title="Ar">&lt;true</var> |
+    <var class="Ar" title="Ar">false&gt;</var></dt>
+  <dd>By default, requests with no referer at all, or a null referer, or a
+      referer with no apparent hostname, are allowed. With this variable set,
+      such requests are disallowed.</dd>
+  <dt><a class="permalink" href="#local-pattern_="><code class="Cm" title="Cm" id="local-pattern_=">local-pattern
+    =</code></a> &#x201C;<var class="Ar" title="Ar">PATTERN</var>&#x201D;</dt>
+  <dd>A wildcard pattern that specifies the local host or hosts. This is used to
+      determine if the host in the referer is local or not. If not specified it
+      defaults to the actual local hostname.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="SYMLINKS"><a class="permalink" href="#SYMLINKS">SYMLINKS</a></h1>
+<code class="Nm" title="Nm">merecat</code> is very picky about symbolic links.
+  Before delivering any file, it first checks each element in the path to see if
+  it is a symbolic link, and expands them all out to get the final actual
+  filename.
+<div class="Pp"></div>
+Along the way it checks for things like links with &#x201C;..&#x201D; that go
+  above the server's directory, and absolute symlinks (ones that start with a
+  /). These are prohibited as security holes, so the server returns an error
+  page for them.
+<div class="Pp"></div>
+This means you cannot set up your web directory with a bunch of symlinks
+  pointing to individual users' home web directories. Instead you do it the
+  other way around &#x2014; the user web directories are real subdirectories of
+  the main web directory, and in each user's home directory there is a symlink
+  pointing to their actual web directory.
+<div class="Pp"></div>
+The CGI pattern is also affected &#x2014; it gets matched against the
+  fully-expanded filename. So, if you have a single CGI directory but then put a
+  symbolic link in it pointing somewhere else, that will not work. The CGI
+  program will be treated as a regular file and returned to the client, instead
+  of getting run. This could be confusing.
+<h1 class="Sh" title="Sh" id="PERMISSIONS"><a class="permalink" href="#PERMISSIONS">PERMISSIONS</a></h1>
+<code class="Nm" title="Nm">merecat</code> is also picky about file permissions.
+  It wants data files (HTML, images) to be world readable. Readable by the group
+  that the merecat process runs as is not enough &#x2014;
+  <code class="Nm" title="Nm">merecat</code> checks explicitly for the
+  world-readable bit. This is so that no one ever gets surprised by a file
+  that's not set world-readable and yet somehow is readable by the HTTP server
+  and therefore the *whole* world.
+<div class="Pp"></div>
+The same logic applies to directories. As with the standard UNIX
+  <code class="Cm" title="Cm">ls</code> program,
+  <code class="Nm" title="Nm">merecat</code> will only let you look at the
+  contents of a directory if its read bit is on; but as with data files, this
+  must be the world-read bit, not just the group-read bit.
+<div class="Pp"></div>
+<code class="Nm" title="Nm">merecat</code> also wants the execute bit to be
+  *off* for data files. A file that is marked executable but doesn't match the
+  CGI pattern might be a script or program that got accidentally left in the
+  wrong directory. Allowing people to fetch the contents of the file might be a
+  security breach, so this is prohibited. Of course if an executable file *does*
+  match the CGI pattern, then it just gets run as a CGI.
+<div class="Pp"></div>
+In summary, data files should be mode 644 (rw-r--r--), directories should be 755
+  (rwxr-xr-x) if you want to allow indexing and 711 (rwx--x--x) to disallow it,
+  and CGI programs should be mode 755 (rwxr-xr-x) or 711 (rwx--x--x).
+<h1 class="Sh" title="Sh" id="LOGS"><a class="permalink" href="#LOGS">LOGS</a></h1>
+<code class="Nm" title="Nm">merecat</code> does all of its logging via
+  <a class="Xr" title="Xr">syslog(3)</a>. All log messages are prepended with
+  the program name, unless the command line option
+  <code class="Fl" title="Fl">-I</code> <var class="Ar" title="Ar">IDENT</var>
+  is used. The facility defaults to <var class="Ar" title="Ar">LOG_DAEMON</var>.
+  Aside from error messages, there are only a few log entry types of interest,
+  all fairly similar to CERN Common Log Format:
+<div class="Pp"></div>
+<div class="Bd">
+<pre class="Li">
+  Aug  6 15:40:34 acme merecat[583]: 165.113.207.103 - - &quot;GET /file&quot; 200 357 
+  Aug  6 15:40:43 acme merecat[583]: 165.113.207.103 - - &quot;HEAD /file&quot; 200 0 
+  Aug  6 15:41:16 acme merecat[583]: referer http://www.acme.com/ -&gt; /dir 
+  Aug  6 15:41:16 acme merecat[583]: user-agent Mozilla/1.1N
+</pre>
+</div>
+<div class="Pp"></div>
+Note that <code class="Nm" title="Nm">merecat</code> does not translate numeric
+  IP addresses into domain names. This is both to save time and as a minor
+  security measure (the numeric address is harder to spoof).
+<div class="Pp"></div>
+If started in the foreground, <code class="Fl" title="Fl">-n</code>, and with
+  debug log level, <code class="Fl" title="Fl">-l</code>
+  <var class="Ar" title="Ar">debug</var>, logs will also be printed on stderr,
+  unless the user also requested <code class="Fl" title="Fl">-s</code>. However,
+  not all systems support the <var class="Ar" title="Ar">LOG_PERROR</var> option
+  to <code class="Fn" title="Fn">openlog</code>().
+<div class="Pp"></div>
+Relevant <span class="Pa" title="Pa">merecat.h</span> define:
+  <code class="Cm" title="Cm">LOG_FACILITY.</code>
+<h1 class="Sh" title="Sh" id="SIGNALS"><a class="permalink" href="#SIGNALS">SIGNALS</a></h1>
+<code class="Nm" title="Nm">merecat</code> handles a couple of signals, which
+  you can send via the standard UNIX <a class="Xr" title="Xr">kill(1)</a>
+  command:
+<dl class="Bl-tag">
+  <dt><a class="permalink" href="#INT,TERM"><code class="Cm" title="Cm" id="INT,TERM">INT,TERM</code></a></dt>
+  <dd>These signals tell <code class="Nm" title="Nm">merecat</code> to shut down
+      immediately.</dd>
+  <dt><a class="permalink" href="#USR1"><code class="Cm" title="Cm" id="USR1">USR1</code></a></dt>
+  <dd>This signal tells <code class="Nm" title="Nm">merecat</code> to toggle log
+      level, between current log level and LOG_DEBUG. If
+      <code class="Nm" title="Nm">merecat</code> was started with LOG_DEBUG the
+      toggle will be to LOG_NOTICE, which is the default log level.</dd>
+  <dt><a class="permalink" href="#USR2"><code class="Cm" title="Cm" id="USR2">USR2</code></a></dt>
+  <dd>This signal tells <code class="Nm" title="Nm">merecat</code> to generate
+      the statistics syslog messages immediately, instead of waiting for the
+      regular hourly update.</dd>
+</dl>
+<h1 class="Sh" title="Sh" id="SEE_ALSO"><a class="permalink" href="#SEE_ALSO">SEE
+  ALSO</a></h1>
+<a class="Xr" title="Xr">merecat.conf(5)</a>,
+  <a class="Xr" title="Xr">ssi(8)</a>,
+  <a class="Xr" title="Xr">htpasswd(1)</a>
+<h1 class="Sh" title="Sh" id="AUTHORS"><a class="permalink" href="#AUTHORS">AUTHORS</a></h1>
+<br/>
+<span class="An" title="An">Jef Poskanzer</span>
+  &#x27E8;jef@mail.acme.com&#x27E9; wrote the famous
+  <code class="Nm" title="Nm">thttpd</code> which
+  <code class="Nm" title="Nm">merecat</code> is based on.
+<br/>
+<span class="An" title="An">Joachim Wiberg</span>
+  &#x27E8;troglobit@gmail.com&#x27E9; introduced all new shiny bugs.
+<h1 class="Sh" title="Sh" id="THANKS"><a class="permalink" href="#THANKS">THANKS</a></h1>
+<code class="Nm" title="Nm">merecat</code> is a fork of
+  <code class="Nm" title="Nm">sthttpd</code>, which in turn is a fork of
+  <code class="Nm" title="Nm">thttpd</code>. So first and foremost, a huge
+  thanks to <span class="An" title="An">Jef Poskanzer</span> for creating
+  <code class="Nm" title="Nm">thttpd</code> and making it open source under the
+  simplified 2-clause BSD license! <span class="An" title="An">Anthony G.
+  Basile</span> deserves another thank you, for merging Gentoo patches and
+  refactoring the build system in <code class="Nm" title="Nm">sthttpd</code>.
+<div class="Pp"></div>
+Also, many thanks to contributors, reviewers, testers: John LoVerso, Jordan
+  Hayes, Chris Torek, Jim Thompson, Barton Schaffer, Geoff Adams, Dan Kegel,
+  John Hascall, Bennett Todd, KIKUCHI Takahiro, Catalin Ionescu, Anders
+  Born&#x00E4;s, and Martin Olsson. Special thanks to Craig Leres for
+  substantial debugging and development during the early days of
+  <code class="Nm" title="Nm">thttpd</code>.</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">August 3, 2019</td>
+    <td class="foot-os">merecat (2.32)</td>
+  </tr>
+</table>
+    <div id="footer">
+      <address><a href="https://github.com/troglobit/merecat/">merecat
+	  httpd</a> is free software under
+	  the <a href="https://en.wikipedia.org/wiki/BSD_licenses#2-clause_license_.28.22Simplified_BSD_License.22_or_.22FreeBSD_License.22.29">2-clause
+	  BSD license</a>.
+      </address>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+#!/bin/sh
+# postinst script for merecat
+
+set -e
+
+case "$1" in
+  configure)
+    ucf usr/share/merecat/merecat.conf /etc/merecat.conf
+    ucf usr/share/merecat/throttle.conf /etc/throttle.conf
+  ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+#DEBHELPER#

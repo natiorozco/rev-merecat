@@ -1,0 +1,48 @@
+merecat (2.31+git20220513+ds-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix "postinst uses /usr/share/doc content (Policy 12.3):
+    /usr/share/doc/merecat/examples/merecat.conf":
+    Install example config files to /usr/share/merecat, symlink them from
+    /usr/share/doc/merecat/examples, and use the ones from /usr/share/merecat
+    in the postinst.
+    (Closes: #1035289)
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 11 May 2023 20:47:24 +0200
+
+merecat (2.31+git20220513+ds-4) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Don't overwrite anything in /var/www.
+
+  [ Joost van Baal-Ilić ]
+  * Use secure copyright file specification URI.
+  * Set upstream metadata fields: Security-Contact.
+  * Drop unnecessary dependency on dh-autoreconf.
+
+ -- Gürkan Myczko <tar@debian.org>  Thu, 23 Feb 2023 07:09:58 +0100
+
+merecat (2.31+git20220513+ds-3) experimental; urgency=medium
+
+  * d/install: also install service file.
+  * d/control:
+    - suggests acme-tiny.
+    - move php-cgi to suggests.
+    - depends ucf.
+  * d/merecat.postinst: added.
+  * Bump standards version to 4.6.2.
+
+ -- Gürkan Myczko <tar@debian.org>  Fri, 17 Feb 2023 09:47:43 +0100
+
+merecat (2.31+git20220513+ds-2) unstable; urgency=medium
+
+  * Source only upload.
+  * d/control: drop systemd from build-depends.
+
+ -- Gürkan Myczko <tar@debian.org>  Tue, 07 Jun 2022 12:40:02 +0200
+
+merecat (2.31+git20220513+ds-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #999837)
+
+ -- Gürkan Myczko <tar@debian.org>  Fri, 13 May 2022 12:14:49 +0200

@@ -1,0 +1,32 @@
+Source: merecat
+Section: web
+Priority: optional
+Maintainer: Joost van Baal-Ilić <joostvb@debian.org>
+Uploaders: Gürkan Myczko <tar@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ pkg-config,
+ libconfuse-dev,
+ libssl-dev,
+ zlib1g-dev
+Standards-Version: 4.6.2
+Homepage: https://troglobit.com/projects/merecat
+Vcs-Browser: https://salsa.debian.org/debian/merecat
+Vcs-Git: https://salsa.debian.org/debian/merecat.git
+
+Package: merecat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ucf
+Provides: httpd, httpd-cgi
+Conflicts: apache2-utils
+Recommends: libcgi-pm-perl
+Suggests: libcgi-fast-perl, php-cgi, acme-tiny
+Description: Embedded web server
+ This is a simple web server based on Jef Poskanzer's thttpd.
+ It supports all basic features required for most use-cases. The
+ most prominent features are probably HTTPS, using OpenSSL, PHP,
+ multiple servers with HTTP redirect support, redirect from HTTP
+ to HTTPS, virtual hosts, and the URL-traffic-based throttling.
+ .
+ Its small footprint makes it suitable for small and embedded
+ systems.

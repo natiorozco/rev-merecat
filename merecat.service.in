@@ -1,0 +1,15 @@
+[Unit]
+Description=Merecat web server
+Documentation=man:merecat(8) man:merecat.conf(5) man:ssi(8) man:htpasswd(1)
+ConditionPathExists=@WWWDIR@
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+ExecStart=@SBINDIR@/merecat -sn @WWWDIR@
+
+[Install]
+WantedBy=multi-user.target

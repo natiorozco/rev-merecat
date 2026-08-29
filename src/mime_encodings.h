@@ -1,0 +1,6 @@
+{ "gz", 0, "gzip", 0 },
+{ "xz", 0, "xz", 0 },
+{ "bz2", 0, "bzip2", 0 },
+{ "svgz", 0, "gzip", 0 },
+{ "Z", 0, "compress", 0 },
+{ "uu", 0, "x-uuencode", 0 },
