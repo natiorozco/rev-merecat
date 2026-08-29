@@ -1,1 +1,2416 @@
-{"version":"1.175.0","results":[{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/build.yml","start":{"line":31,"col":9,"offset":733},"end":{"line":31,"col":34,"offset":758},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/codeql-analysis.yml","start":{"line":41,"col":9,"offset":1118},"end":{"line":41,"col":34,"offset":1143},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/codeql-analysis.yml","start":{"line":49,"col":9,"offset":1353},"end":{"line":49,"col":43,"offset":1387},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/codeql-analysis.yml","start":{"line":60,"col":9,"offset":2012},"end":{"line":60,"col":48,"offset":2051},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/codeql-analysis.yml","start":{"line":74,"col":9,"offset":2483},"end":{"line":74,"col":46,"offset":2520},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/container.yml","start":{"line":20,"col":9,"offset":281},"end":{"line":20,"col":34,"offset":306},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.run-shell-injection.run-shell-injection","path":".github/workflows/container.yml","start":{"line":26,"col":9,"offset":611},"end":{"line":37,"col":42,"offset":1172},"extra":{"message":"Using variable interpolation `${{...}}` with `github` context data in a `run:` step could allow an attacker to inject their own code into the runner. This would allow them to steal secrets and code. `github` context data can have arbitrary user input and should be treated as untrusted. Instead, use an intermediate environment variable with `env:` to store the data and use the environment variable in the `run:` script. Be sure to use double-quotes the environment variable, like this: \"$ENVVAR\".","metadata":{"category":"security","cwe":["CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"],"owasp":["A01:2017 - Injection","A03:2021 - Injection","A05:2025 - Injection"],"references":["https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections","https://securitylab.github.com/research/github-actions-untrusted-input/"],"technology":["github-actions"],"cwe2022-top25":true,"cwe2021-top25":true,"subcategory":["vuln"],"likelihood":"HIGH","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Command Injection"],"source":"https://semgrep.dev/r/yaml.github-actions.security.run-shell-injection.run-shell-injection","shortlink":"https://sg.run/pkzk"},"severity":"ERROR","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/coverity.yml","start":{"line":18,"col":9,"offset":265},"end":{"line":18,"col":34,"offset":290},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/coverity.yml","start":{"line":30,"col":9,"offset":765},"end":{"line":30,"col":31,"offset":787},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/coverity.yml","start":{"line":79,"col":9,"offset":2625},"end":{"line":79,"col":41,"offset":2657},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/release.yml","start":{"line":17,"col":9,"offset":347},"end":{"line":17,"col":34,"offset":372},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/release.yml","start":{"line":26,"col":9,"offset":690},"end":{"line":26,"col":40,"offset":721},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/release.yml","start":{"line":41,"col":9,"offset":1142},"end":{"line":41,"col":34,"offset":1167},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","path":".github/workflows/release.yml","start":{"line":56,"col":9,"offset":1622},"end":{"line":56,"col":62,"offset":1675},"extra":{"message":"GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.","metadata":{"category":"security","cwe":["CWE-1357: Reliance on Insufficiently Trustworthy Component","CWE-353: Missing Support for Integrity Check"],"owasp":["A08:2021 - Software and Data Integrity Failures","A08:2025 - Software and Data Integrity Failures"],"references":["https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"],"technology":["github-actions"],"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"HIGH","confidence":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Cryptographic Issues","Other"],"source":"https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag","shortlink":"https://sg.run/2LgAL"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"dockerfile.security.missing-user-entrypoint.missing-user-entrypoint","path":"Dockerfile","start":{"line":24,"col":1,"offset":634},"end":{"line":24,"col":37,"offset":670},"extra":{"message":"By not specifying a USER, a program in the container may run as 'root'. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than 'root'.","fix":"USER non-root\nENTRYPOINT merecat -p 80 -n /var/www","metadata":{"cwe":["CWE-269: Improper Privilege Management"],"category":"security","technology":["dockerfile"],"confidence":"MEDIUM","owasp":["A04:2021 - Insecure Design","A06:2025 - Insecure Design"],"references":["https://owasp.org/Top10/A04_2021-Insecure_Design"],"subcategory":["audit"],"likelihood":"LOW","impact":"MEDIUM","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Improper Authorization"],"source":"https://semgrep.dev/r/dockerfile.security.missing-user-entrypoint.missing-user-entrypoint","shortlink":"https://sg.run/k281"},"severity":"ERROR","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn","path":"src/ssl.c","start":{"line":106,"col":7,"offset":3016},"end":{"line":106,"col":23,"offset":3032},"extra":{"message":"Avoid using 'strtok()'. This function directly modifies the first argument buffer, permanently erasing the delimiter character. Use 'strtok_r()' instead.","metadata":{"cwe":["CWE-676: Use of Potentially Dangerous Function"],"references":["https://wiki.sei.cmu.edu/confluence/display/c/STR06-C.+Do+not+assume+that+strtok%28%29+leaves+the+parse+string+unchanged","https://man7.org/linux/man-pages/man3/strtok.3.html#BUGS","https://stackoverflow.com/a/40335556"],"category":"security","technology":["c"],"confidence":"LOW","subcategory":["audit"],"likelihood":"LOW","impact":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Dangerous Method or Function"],"source":"https://semgrep.dev/r/c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn","shortlink":"https://sg.run/LwqG"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn","path":"src/ssl.c","start":{"line":113,"col":8,"offset":3138},"end":{"line":113,"col":25,"offset":3155},"extra":{"message":"Avoid using 'strtok()'. This function directly modifies the first argument buffer, permanently erasing the delimiter character. Use 'strtok_r()' instead.","metadata":{"cwe":["CWE-676: Use of Potentially Dangerous Function"],"references":["https://wiki.sei.cmu.edu/confluence/display/c/STR06-C.+Do+not+assume+that+strtok%28%29+leaves+the+parse+string+unchanged","https://man7.org/linux/man-pages/man3/strtok.3.html#BUGS","https://stackoverflow.com/a/40335556"],"category":"security","technology":["c"],"confidence":"LOW","subcategory":["audit"],"likelihood":"LOW","impact":"HIGH","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Dangerous Method or Function"],"source":"https://semgrep.dev/r/c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn","shortlink":"https://sg.run/LwqG"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"html.security.plaintext-http-link.plaintext-http-link","path":"www/index.html","start":{"line":16,"col":3,"offset":441},"end":{"line":21,"col":7,"offset":681},"extra":{"message":"This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.","metadata":{"category":"security","technology":["html"],"cwe":["CWE-319: Cleartext Transmission of Sensitive Information"],"owasp":["A03:2017 - Sensitive Data Exposure","A02:2021 - Cryptographic Failures","A04:2025 - Cryptographic Failures"],"confidence":"HIGH","subcategory":["vuln"],"references":["https://cwe.mitre.org/data/definitions/319.html"],"likelihood":"LOW","impact":"LOW","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link","shortlink":"https://sg.run/RA5q"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"html.security.plaintext-http-link.plaintext-http-link","path":"www/index.html","start":{"line":35,"col":3,"offset":1203},"end":{"line":35,"col":60,"offset":1260},"extra":{"message":"This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.","metadata":{"category":"security","technology":["html"],"cwe":["CWE-319: Cleartext Transmission of Sensitive Information"],"owasp":["A03:2017 - Sensitive Data Exposure","A02:2021 - Cryptographic Failures","A04:2025 - Cryptographic Failures"],"confidence":"HIGH","subcategory":["vuln"],"references":["https://cwe.mitre.org/data/definitions/319.html"],"likelihood":"LOW","impact":"LOW","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link","shortlink":"https://sg.run/RA5q"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"html.security.plaintext-http-link.plaintext-http-link","path":"www/index.html","start":{"line":52,"col":3,"offset":1879},"end":{"line":52,"col":50,"offset":1926},"extra":{"message":"This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.","metadata":{"category":"security","technology":["html"],"cwe":["CWE-319: Cleartext Transmission of Sensitive Information"],"owasp":["A03:2017 - Sensitive Data Exposure","A02:2021 - Cryptographic Failures","A04:2025 - Cryptographic Failures"],"confidence":"HIGH","subcategory":["vuln"],"references":["https://cwe.mitre.org/data/definitions/319.html"],"likelihood":"LOW","impact":"LOW","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link","shortlink":"https://sg.run/RA5q"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"html.security.plaintext-http-link.plaintext-http-link","path":"www/index.html","start":{"line":54,"col":3,"offset":1984},"end":{"line":54,"col":54,"offset":2035},"extra":{"message":"This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.","metadata":{"category":"security","technology":["html"],"cwe":["CWE-319: Cleartext Transmission of Sensitive Information"],"owasp":["A03:2017 - Sensitive Data Exposure","A02:2021 - Cryptographic Failures","A04:2025 - Cryptographic Failures"],"confidence":"HIGH","subcategory":["vuln"],"references":["https://cwe.mitre.org/data/definitions/319.html"],"likelihood":"LOW","impact":"LOW","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link","shortlink":"https://sg.run/RA5q"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"html.security.plaintext-http-link.plaintext-http-link","path":"www/merecat.8.html","start":{"line":443,"col":3,"offset":24823},"end":{"line":443,"col":132,"offset":24952},"extra":{"message":"This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.","metadata":{"category":"security","technology":["html"],"cwe":["CWE-319: Cleartext Transmission of Sensitive Information"],"owasp":["A03:2017 - Sensitive Data Exposure","A02:2021 - Cryptographic Failures","A04:2025 - Cryptographic Failures"],"confidence":"HIGH","subcategory":["vuln"],"references":["https://cwe.mitre.org/data/definitions/319.html"],"likelihood":"LOW","impact":"LOW","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link","shortlink":"https://sg.run/RA5q"},"severity":"WARNING","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}},{"check_id":"php.lang.security.phpinfo-use.phpinfo-use","path":"www/phpinfo.php","start":{"line":2,"col":1,"offset":6},"end":{"line":2,"col":11,"offset":16},"extra":{"message":"The 'phpinfo' function may reveal sensitive information about your environment.","metadata":{"cwe":["CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"],"references":["https://www.php.net/manual/en/function.phpinfo","https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/PhpinfosSniff.php"],"category":"security","technology":["php"],"owasp":["A01:2021 - Broken Access Control","A01:2025 - Broken Access Control"],"cwe2021-top25":true,"subcategory":["vuln"],"likelihood":"MEDIUM","impact":"MEDIUM","confidence":"MEDIUM","license":"Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license","vulnerability_class":["Mishandled Sensitive Information"],"source":"https://semgrep.dev/r/php.lang.security.phpinfo-use.phpinfo-use","shortlink":"https://sg.run/W82E"},"severity":"ERROR","fingerprint":"requires login","lines":"requires login","validation_state":"NO_VALIDATOR","engine_kind":"OSS"}}],"errors":[{"code":3,"level":"warn","type":"Syntax error","message":"Syntax error at line src/merecat.h:1:\n `/* Configuration defines for merecat and libhttpd\n**\n** Copyright (C) 1995-2015  Jef Poskanzer <jef@mail.acme.com>\n** Copyright (C) 2016-2021  Joachim Wiberg <troglobit@gmail.com>\n** All rights reserved.\n**\n** Redistribution and use in source and binary forms, with or without\n** modification, are permitted provided that the following conditions\n** are met:\n** 1. Redistributions of source code must retain the above copyright\n**    notice, this list of conditions and the following disclaimer.\n** 2. Redistributions in binary form must reproduce the above copyright\n**    notice, this list of conditions and the following disclaimer in the\n**    documentation and/or other materials provided with the distribution.\n**\n** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n** ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNERS OR CONTRIBUTORS BE\n** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n** CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n** SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n** INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n** CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF\n** THE POSSIBILITY OF SUCH DAMAGE.\n*/\n\n#ifndef MERECAT_H_\n#define MERECAT_H_\n\n#include <errno.h>\n#include <stdio.h>\n#include <stdint.h>\n#include <stdlib.h>\n#include <string.h>\n#include <unistd.h>\n\n/* The following configuration settings are sorted in order of decreasing\n** likelihood that you'd want to change them - most likely first, least\n** likely last.\n*/\n\n/* CONFIGURE: Server software version, standard httpd version format.\n** You may want to add a build ID here, but probably not.\n*/\n#define SERVER_SOFTWARE PACKAGE \"/\" VERSION\n\n/* CONFIGURE: CGI programs must m... (truncated 15997 more characters)","path":"src/merecat.h"},{"code":3,"level":"warn","type":"Syntax error","message":"Syntax error at line src/merecat.c:1:\n `/* Simple, small and fast HTTP server\n**\n** Copyright (C) 1995-2015  Jef Poskanzer <jef@mail.acme.com>\n** Copyright (C) 2016-2021  Joachim Wiberg <troglobit@gmail.com>\n** All rights reserved.\n**\n** Redistribution and use in source and binary forms, with or without\n** modification, are permitted provided that the following conditions\n** are met:\n** 1. Redistributions of source code must retain the above copyright\n**    notice, this list of conditions and the following disclaimer.\n** 2. Redistributions in binary form must reproduce the above copyright\n**    notice, this list of conditions and the following disclaimer in the\n**    documentation and/or other materials provided with the distribution.\n**\n** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n** ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNERS OR CONTRIBUTORS BE\n** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n** CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n** SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n** INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n** CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF\n** THE POSSIBILITY OF SUCH DAMAGE.\n*/\n\n#include <config.h>\n\n#include <getopt.h>\n#include <pwd.h>\n#ifdef HAVE_GRP_H\n#include <grp.h>\n#endif\n#include <stdio.h>\n#include <signal.h>\n\n#define SYSLOG_NAMES\n#include <syslog.h>\n\n#include <sys/param.h>\n#include <sys/types.h>\n#include <sys/stat.h>\n#include <sys/wait.h>\n#include <sys/uio.h>\n\n#ifdef HAVE_ZLIB_H\n#include <zlib.h>\n#endif\n\n#include \"conf.h\"\n#include \"fdwatch.h\"\n#include \"libhttpd.h\"\n#include \"match.h\"\n#include \"mmc.h\"\n#include \"merecat.h\"\n#include \"srv.h\"\n#include \"ssl.h\"\n#include \"timers.h\"\n\n#ifndef SHUT_WR\n#define SHUT_WR 1... (truncated 43378 more characters)","path":"src/merecat.c"},{"code":3,"level":"warn","type":["PartialParsing",[{"path":".github/workflows/container.yml","start":{"line":24,"col":75,"offset":480},"end":{"line":24,"col":78,"offset":483}}]],"message":"Syntax error at line .github/workflows/container.yml:24:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.curl-eval.curl-eval', `${{` was unexpected","path":".github/workflows/container.yml","spans":[{"file":".github/workflows/container.yml","start":{"line":24,"col":75,"offset":480},"end":{"line":24,"col":78,"offset":483}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":".github/workflows/container.yml","start":{"line":24,"col":75,"offset":480},"end":{"line":24,"col":78,"offset":483}}]],"message":"Syntax error at line .github/workflows/container.yml:24:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.gha-curl-pipe-shell.gha-curl-pipe-shell', `${{` was unexpected","path":".github/workflows/container.yml","spans":[{"file":".github/workflows/container.yml","start":{"line":24,"col":75,"offset":480},"end":{"line":24,"col":78,"offset":483}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":".github/workflows/container.yml","start":{"line":26,"col":32,"offset":617},"end":{"line":26,"col":35,"offset":620}},{"path":".github/workflows/container.yml","start":{"line":30,"col":19,"offset":617},"end":{"line":30,"col":31,"offset":629}}]],"message":"Syntax error at line .github/workflows/container.yml:26:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.curl-eval.curl-eval', `${{` was unexpected","path":".github/workflows/container.yml","spans":[{"file":".github/workflows/container.yml","start":{"line":26,"col":32,"offset":617},"end":{"line":26,"col":35,"offset":620}},{"file":".github/workflows/container.yml","start":{"line":30,"col":19,"offset":617},"end":{"line":30,"col":31,"offset":629}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":".github/workflows/container.yml","start":{"line":26,"col":32,"offset":617},"end":{"line":26,"col":35,"offset":620}},{"path":".github/workflows/container.yml","start":{"line":30,"col":19,"offset":617},"end":{"line":30,"col":31,"offset":629}}]],"message":"Syntax error at line .github/workflows/container.yml:26:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.gha-curl-pipe-shell.gha-curl-pipe-shell', `${{` was unexpected","path":".github/workflows/container.yml","spans":[{"file":".github/workflows/container.yml","start":{"line":26,"col":32,"offset":617},"end":{"line":26,"col":35,"offset":620}},{"file":".github/workflows/container.yml","start":{"line":30,"col":19,"offset":617},"end":{"line":30,"col":31,"offset":629}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":"src/fdwatch.c","start":{"line":489,"col":64,"offset":0},"end":{"line":489,"col":70,"offset":6}}]],"message":"Syntax error at line src/fdwatch.c:489:\n `pollfd` was unexpected","path":"src/fdwatch.c","spans":[{"file":"src/fdwatch.c","start":{"line":489,"col":64,"offset":0},"end":{"line":489,"col":70,"offset":6}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":"src/htpasswd.c","start":{"line":179,"col":36,"offset":0},"end":{"line":179,"col":44,"offset":8}},{"path":"src/htpasswd.c","start":{"line":184,"col":13,"offset":0},"end":{"line":184,"col":22,"offset":9}}]],"message":"Syntax error at line src/htpasswd.c:179:\n `template` was unexpected","path":"src/htpasswd.c","spans":[{"file":"src/htpasswd.c","start":{"line":179,"col":36,"offset":0},"end":{"line":179,"col":44,"offset":8}},{"file":"src/htpasswd.c","start":{"line":184,"col":13,"offset":0},"end":{"line":184,"col":22,"offset":9}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":"src/libhttpd.c","start":{"line":364,"col":17,"offset":0},"end":{"line":364,"col":23,"offset":6}},{"path":"src/libhttpd.c","start":{"line":397,"col":12,"offset":0},"end":{"line":397,"col":18,"offset":6}},{"path":"src/libhttpd.c","start":{"line":451,"col":18,"offset":0},"end":{"line":451,"col":23,"offset":5}},{"path":"src/libhttpd.c","start":{"line":814,"col":31,"offset":0},"end":{"line":814,"col":37,"offset":6}},{"path":"src/libhttpd.c","start":{"line":826,"col":52,"offset":0},"end":{"line":826,"col":58,"offset":6}},{"path":"src/libhttpd.c","start":{"line":913,"col":14,"offset":0},"end":{"line":913,"col":19,"offset":5}},{"path":"src/libhttpd.c","start":{"line":920,"col":22,"offset":0},"end":{"line":920,"col":27,"offset":5}},{"path":"src/libhttpd.c","start":{"line":2916,"col":57,"offset":0},"end":{"line":2916,"col":58,"offset":1}},{"path":"src/libhttpd.c","start":{"line":3079,"col":1,"offset":0},"end":{"line":3079,"col":2,"offset":1}},{"path":"src/libhttpd.c","start":{"line":3162,"col":1,"offset":0},"end":{"line":3162,"col":9,"offset":8}},{"path":"src/libhttpd.c","start":{"line":3168,"col":1,"offset":0},"end":{"line":3168,"col":9,"offset":8}},{"path":"src/libhttpd.c","start":{"line":3361,"col":2,"offset":0},"end":{"line":3361,"col":23,"offset":21}},{"path":"src/libhttpd.c","start":{"line":3363,"col":3,"offset":0},"end":{"line":3365,"col":15,"offset":31}},{"path":"src/libhttpd.c","start":{"line":3369,"col":1,"offset":0},"end":{"line":3369,"col":6,"offset":5}},{"path":"src/libhttpd.c","start":{"line":3371,"col":1,"offset":0},"end":{"line":3371,"col":7,"offset":6}},{"path":"src/libhttpd.c","start":{"line":3373,"col":2,"offset":0},"end":{"line":3373,"col":3,"offset":1}},{"path":"src/libhttpd.c","start":{"line":3451,"col":17,"offset":0},"end":{"line":3451,"col":22,"offset":5}},{"path":"src/libhttpd.c","start":{"line":3452,"col":20,"offset":0},"end":{"line":3452,"col":27,"offset":7}},{"path":"src/libhttpd.c","start":{"line":3455,"col":26,"offset":0},"end":{"line":3455,"col":31,"offset":5}},{"path":"src/libhttpd.c","start":{"line":3456,"col":32,"offset":0},"end":{"line":3456,"col":39,"offset":7}},{"path":"src/libhttpd.c","start":{"line":3782,"col":13,"offset":0},"end":{"line":3782,"col":18,"offset":5}},{"path":"src/libhttpd.c","start":{"line":3802,"col":13,"offset":0},"end":{"line":3802,"col":18,"offset":5}},{"path":"src/libhttpd.c","start":{"line":3912,"col":13,"offset":0},"end":{"line":3912,"col":20,"offset":7}},{"path":"src/libhttpd.c","start":{"line":4891,"col":34,"offset":0},"end":{"line":4891,"col":37,"offset":3}}]],"message":"Syntax error at line src/libhttpd.c:364:\n `struct` was unexpected","path":"src/libhttpd.c","spans":[{"file":"src/libhttpd.c","start":{"line":364,"col":17,"offset":0},"end":{"line":364,"col":23,"offset":6}},{"file":"src/libhttpd.c","start":{"line":397,"col":12,"offset":0},"end":{"line":397,"col":18,"offset":6}},{"file":"src/libhttpd.c","start":{"line":451,"col":18,"offset":0},"end":{"line":451,"col":23,"offset":5}},{"file":"src/libhttpd.c","start":{"line":814,"col":31,"offset":0},"end":{"line":814,"col":37,"offset":6}},{"file":"src/libhttpd.c","start":{"line":826,"col":52,"offset":0},"end":{"line":826,"col":58,"offset":6}},{"file":"src/libhttpd.c","start":{"line":913,"col":14,"offset":0},"end":{"line":913,"col":19,"offset":5}},{"file":"src/libhttpd.c","start":{"line":920,"col":22,"offset":0},"end":{"line":920,"col":27,"offset":5}},{"file":"src/libhttpd.c","start":{"line":2916,"col":57,"offset":0},"end":{"line":2916,"col":58,"offset":1}},{"file":"src/libhttpd.c","start":{"line":3079,"col":1,"offset":0},"end":{"line":3079,"col":2,"offset":1}},{"file":"src/libhttpd.c","start":{"line":3162,"col":1,"offset":0},"end":{"line":3162,"col":9,"offset":8}},{"file":"src/libhttpd.c","start":{"line":3168,"col":1,"offset":0},"end":{"line":3168,"col":9,"offset":8}},{"file":"src/libhttpd.c","start":{"line":3361,"col":2,"offset":0},"end":{"line":3361,"col":23,"offset":21}},{"file":"src/libhttpd.c","start":{"line":3363,"col":3,"offset":0},"end":{"line":3365,"col":15,"offset":31}},{"file":"src/libhttpd.c","start":{"line":3369,"col":1,"offset":0},"end":{"line":3369,"col":6,"offset":5}},{"file":"src/libhttpd.c","start":{"line":3371,"col":1,"offset":0},"end":{"line":3371,"col":7,"offset":6}},{"file":"src/libhttpd.c","start":{"line":3373,"col":2,"offset":0},"end":{"line":3373,"col":3,"offset":1}},{"file":"src/libhttpd.c","start":{"line":3451,"col":17,"offset":0},"end":{"line":3451,"col":22,"offset":5}},{"file":"src/libhttpd.c","start":{"line":3452,"col":20,"offset":0},"end":{"line":3452,"col":27,"offset":7}},{"file":"src/libhttpd.c","start":{"line":3455,"col":26,"offset":0},"end":{"line":3455,"col":31,"offset":5}},{"file":"src/libhttpd.c","start":{"line":3456,"col":32,"offset":0},"end":{"line":3456,"col":39,"offset":7}},{"file":"src/libhttpd.c","start":{"line":3782,"col":13,"offset":0},"end":{"line":3782,"col":18,"offset":5}},{"file":"src/libhttpd.c","start":{"line":3802,"col":13,"offset":0},"end":{"line":3802,"col":18,"offset":5}},{"file":"src/libhttpd.c","start":{"line":3912,"col":13,"offset":0},"end":{"line":3912,"col":20,"offset":7}},{"file":"src/libhttpd.c","start":{"line":4891,"col":34,"offset":0},"end":{"line":4891,"col":37,"offset":3}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":"www/footer.html","start":{"line":8,"col":3,"offset":0},"end":{"line":10,"col":8,"offset":22}}]],"message":"Syntax error at line www/footer.html:8:\n `</div>\n</body>\n</html>` was unexpected","path":"www/footer.html","spans":[{"file":"www/footer.html","start":{"line":8,"col":3,"offset":0},"end":{"line":10,"col":8,"offset":22}}]},{"code":3,"level":"warn","type":["PartialParsing",[{"path":"www/header.html","start":{"line":2,"col":1,"offset":0},"end":{"line":11,"col":21,"offset":294}}]],"message":"Syntax error at line www/header.html:2:\n `<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=viewport content=\"width=device-width, initial-scale=0.8\">\n  <title>%TITLE%</title>\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\">\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"/icons/favicon.ico\">\n</head>\n<body>\n  <div id=\"wrapper\">` was unexpected","path":"www/header.html","spans":[{"file":"www/header.html","start":{"line":2,"col":1,"offset":0},"end":{"line":11,"col":21,"offset":294}}]}],"paths":{"scanned":[".github/SECURITY.md",".github/workflows/build.yml",".github/workflows/codeql-analysis.yml",".github/workflows/container.yml",".github/workflows/coverity.yml",".github/workflows/release.yml",".gitignore",".pc/.quilt_patches",".pc/.quilt_series",".pc/.version",".pc/applied-patches","ChangeLog.md","Dockerfile","LICENSE","Makefile.am","README.md","autogen.sh","build.sh","configure.ac","debian/changelog","debian/control","debian/copyright","debian/docs","debian/install","debian/merecat.links","debian/merecat.lintian-overrides","debian/merecat.postinst","debian/rules","debian/source/format","debian/source/include-binaries","debian/upstream/metadata","debian/watch","doc/README.thttpd","doc/TODO","doc/cgi.txt","lib/.gitignore","lib/lstat.c","lib/malloc.c","lib/realloc.c","lib/strlcat.c","lib/strlcpy.c","lib/tempfile.c","man/Makefile.am","man/htpasswd.1","man/merecat.8","man/merecat.conf.5","man/ssi.8","man.sh","merecat.conf","merecat.service.in","results.txt","run.sh","src/.gitignore","src/Makefile.am","src/base64.c","src/base64.h","src/conf.c","src/conf.h","src/fdwatch.c","src/fdwatch.h","src/file.c","src/file.h","src/htpasswd.c","src/libhttpd.c","src/libhttpd.h","src/make_mime.pl","src/match.c","src/match.h","src/md5.c","src/md5.h","src/merecat.c","src/merecat.h","src/mime_encodings.h","src/mime_encodings.txt","src/mime_types.h","src/mime_types.txt","src/mmc.c","src/mmc.h","src/pidfile.c","src/srv.c","src/srv.h","src/ssl.c","src/ssl.h","src/stack.c","src/tdate_parse.c","src/tdate_parse.h","src/timers.c","src/timers.h","throttle.conf","www/.gitignore","www/Makefile.am","www/cgi-bin/.gitignore","www/cgi-bin/Makefile.am","www/cgi-bin/printenv","www/cgi-bin/ssi.c","www/footer.html","www/header.html","www/htpasswd.1.html","www/icons/Makefile.am","www/img/Makefile.am","www/index.html","www/main.css","www/merecat.8.html","www/merecat.conf.5.html","www/phpinfo.php","www/ssi.8.html","www/test.php"]},"time":{"rules":[],"rules_parse_time":0.17443490028381348,"profiling_times":{"config_time":1.3605072498321533,"core_time":0.7647650241851807,"ignores_time":0.0007431507110595703,"total_time":2.133373975753784},"parsing_time":{"total_time":0.0,"per_file_time":{"mean":0.0,"std_dev":0.0},"very_slow_stats":{"time_ratio":0.0,"count_ratio":0.0},"very_slow_files":[]},"scanning_time":{"total_time":1.2864875793457031,"per_file_time":{"mean":0.0046952101435974595,"std_dev":0.00027083473220146994},"very_slow_stats":{"time_ratio":0.0,"count_ratio":0.0},"very_slow_files":[]},"matching_time":{"total_time":0.0,"per_file_and_rule_time":{"mean":0.0,"std_dev":0.0},"very_slow_stats":{"time_ratio":0.0,"count_ratio":0.0},"very_slow_rules_on_files":[]},"tainting_time":{"total_time":0.0,"per_def_and_rule_time":{"mean":0.0,"std_dev":0.0},"very_slow_stats":{"time_ratio":0.0,"count_ratio":0.0},"very_slow_rules_on_defs":[]},"fixpoint_timeouts":[],"prefiltering":{"project_level_time":0.0,"file_level_time":0.0,"rules_with_project_prefilters_ratio":0.0,"rules_with_file_prefilters_ratio":0.9677131644666429,"rules_selected_ratio":0.04174099179450589,"rules_matched_ratio":0.04174099179450589},"targets":[],"total_bytes":0,"max_memory_bytes":874726464},"engine_requested":"OSS","skipped_rules":[],"profiling_results":[]}
+{
+    "version": "1.175.0",
+    "results": [
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/build.yml",
+            "start": {
+                "line": 31,
+                "col": 9,
+                "offset": 733
+            },
+            "end": {
+                "line": 31,
+                "col": 34,
+                "offset": 758
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/codeql-analysis.yml",
+            "start": {
+                "line": 41,
+                "col": 9,
+                "offset": 1118
+            },
+            "end": {
+                "line": 41,
+                "col": 34,
+                "offset": 1143
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/codeql-analysis.yml",
+            "start": {
+                "line": 49,
+                "col": 9,
+                "offset": 1353
+            },
+            "end": {
+                "line": 49,
+                "col": 43,
+                "offset": 1387
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/codeql-analysis.yml",
+            "start": {
+                "line": 60,
+                "col": 9,
+                "offset": 2012
+            },
+            "end": {
+                "line": 60,
+                "col": 48,
+                "offset": 2051
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/codeql-analysis.yml",
+            "start": {
+                "line": 74,
+                "col": 9,
+                "offset": 2483
+            },
+            "end": {
+                "line": 74,
+                "col": 46,
+                "offset": 2520
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/container.yml",
+            "start": {
+                "line": 20,
+                "col": 9,
+                "offset": 281
+            },
+            "end": {
+                "line": 20,
+                "col": 34,
+                "offset": 306
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.run-shell-injection.run-shell-injection",
+            "path": ".github/workflows/container.yml",
+            "start": {
+                "line": 26,
+                "col": 9,
+                "offset": 611
+            },
+            "end": {
+                "line": 37,
+                "col": 42,
+                "offset": 1172
+            },
+            "extra": {
+                "message": "Using variable interpolation `${{...}}` with `github` context data in a `run:` step could allow an attacker to inject their own code into the runner. This would allow them to steal secrets and code. `github` context data can have arbitrary user input and should be treated as untrusted. Instead, use an intermediate environment variable with `env:` to store the data and use the environment variable in the `run:` script. Be sure to use double-quotes the environment variable, like this: \"$ENVVAR\".",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+                    ],
+                    "owasp": [
+                        "A01:2017 - Injection",
+                        "A03:2021 - Injection",
+                        "A05:2025 - Injection"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections",
+                        "https://securitylab.github.com/research/github-actions-untrusted-input/"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "cwe2022-top25": true,
+                    "cwe2021-top25": true,
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "HIGH",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Command Injection"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.run-shell-injection.run-shell-injection",
+                    "shortlink": "https://sg.run/pkzk"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/coverity.yml",
+            "start": {
+                "line": 18,
+                "col": 9,
+                "offset": 265
+            },
+            "end": {
+                "line": 18,
+                "col": 34,
+                "offset": 290
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/coverity.yml",
+            "start": {
+                "line": 30,
+                "col": 9,
+                "offset": 765
+            },
+            "end": {
+                "line": 30,
+                "col": 31,
+                "offset": 787
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/coverity.yml",
+            "start": {
+                "line": 79,
+                "col": 9,
+                "offset": 2625
+            },
+            "end": {
+                "line": 79,
+                "col": 41,
+                "offset": 2657
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/release.yml",
+            "start": {
+                "line": 17,
+                "col": 9,
+                "offset": 347
+            },
+            "end": {
+                "line": 17,
+                "col": 34,
+                "offset": 372
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/release.yml",
+            "start": {
+                "line": 26,
+                "col": 9,
+                "offset": 690
+            },
+            "end": {
+                "line": 26,
+                "col": 40,
+                "offset": 721
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/release.yml",
+            "start": {
+                "line": 41,
+                "col": 9,
+                "offset": 1142
+            },
+            "end": {
+                "line": 41,
+                "col": 34,
+                "offset": 1167
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+            "path": ".github/workflows/release.yml",
+            "start": {
+                "line": 56,
+                "col": 9,
+                "offset": 1622
+            },
+            "end": {
+                "line": 56,
+                "col": 62,
+                "offset": 1675
+            },
+            "extra": {
+                "message": "GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.",
+                "metadata": {
+                    "category": "security",
+                    "cwe": [
+                        "CWE-1357: Reliance on Insufficiently Trustworthy Component",
+                        "CWE-353: Missing Support for Integrity Check"
+                    ],
+                    "owasp": [
+                        "A08:2021 - Software and Data Integrity Failures",
+                        "A08:2025 - Software and Data Integrity Failures"
+                    ],
+                    "references": [
+                        "https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions"
+                    ],
+                    "technology": [
+                        "github-actions"
+                    ],
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "HIGH",
+                    "confidence": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Cryptographic Issues",
+                        "Other"
+                    ],
+                    "source": "https://semgrep.dev/r/yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag",
+                    "shortlink": "https://sg.run/2LgAL"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "dockerfile.security.missing-user-entrypoint.missing-user-entrypoint",
+            "path": "Dockerfile",
+            "start": {
+                "line": 24,
+                "col": 1,
+                "offset": 634
+            },
+            "end": {
+                "line": 24,
+                "col": 37,
+                "offset": 670
+            },
+            "extra": {
+                "message": "By not specifying a USER, a program in the container may run as 'root'. This is a security hazard. If an attacker can control a process running as root, they may have control over the container. Ensure that the last USER in a Dockerfile is a USER other than 'root'.",
+                "fix": "USER non-root\nENTRYPOINT merecat -p 80 -n /var/www",
+                "metadata": {
+                    "cwe": [
+                        "CWE-269: Improper Privilege Management"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "dockerfile"
+                    ],
+                    "confidence": "MEDIUM",
+                    "owasp": [
+                        "A04:2021 - Insecure Design",
+                        "A06:2025 - Insecure Design"
+                    ],
+                    "references": [
+                        "https://owasp.org/Top10/A04_2021-Insecure_Design"
+                    ],
+                    "subcategory": [
+                        "audit"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "MEDIUM",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Improper Authorization"
+                    ],
+                    "source": "https://semgrep.dev/r/dockerfile.security.missing-user-entrypoint.missing-user-entrypoint",
+                    "shortlink": "https://sg.run/k281"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn",
+            "path": "src/ssl.c",
+            "start": {
+                "line": 106,
+                "col": 7,
+                "offset": 3016
+            },
+            "end": {
+                "line": 106,
+                "col": 23,
+                "offset": 3032
+            },
+            "extra": {
+                "message": "Avoid using 'strtok()'. This function directly modifies the first argument buffer, permanently erasing the delimiter character. Use 'strtok_r()' instead.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-676: Use of Potentially Dangerous Function"
+                    ],
+                    "references": [
+                        "https://wiki.sei.cmu.edu/confluence/display/c/STR06-C.+Do+not+assume+that+strtok%28%29+leaves+the+parse+string+unchanged",
+                        "https://man7.org/linux/man-pages/man3/strtok.3.html#BUGS",
+                        "https://stackoverflow.com/a/40335556"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "c"
+                    ],
+                    "confidence": "LOW",
+                    "subcategory": [
+                        "audit"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Dangerous Method or Function"
+                    ],
+                    "source": "https://semgrep.dev/r/c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn",
+                    "shortlink": "https://sg.run/LwqG"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn",
+            "path": "src/ssl.c",
+            "start": {
+                "line": 113,
+                "col": 8,
+                "offset": 3138
+            },
+            "end": {
+                "line": 113,
+                "col": 25,
+                "offset": 3155
+            },
+            "extra": {
+                "message": "Avoid using 'strtok()'. This function directly modifies the first argument buffer, permanently erasing the delimiter character. Use 'strtok_r()' instead.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-676: Use of Potentially Dangerous Function"
+                    ],
+                    "references": [
+                        "https://wiki.sei.cmu.edu/confluence/display/c/STR06-C.+Do+not+assume+that+strtok%28%29+leaves+the+parse+string+unchanged",
+                        "https://man7.org/linux/man-pages/man3/strtok.3.html#BUGS",
+                        "https://stackoverflow.com/a/40335556"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "c"
+                    ],
+                    "confidence": "LOW",
+                    "subcategory": [
+                        "audit"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "HIGH",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Dangerous Method or Function"
+                    ],
+                    "source": "https://semgrep.dev/r/c.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn",
+                    "shortlink": "https://sg.run/LwqG"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "www/index.html",
+            "start": {
+                "line": 16,
+                "col": 3,
+                "offset": 441
+            },
+            "end": {
+                "line": 21,
+                "col": 7,
+                "offset": 681
+            },
+            "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                    "category": "security",
+                    "technology": [
+                        "html"
+                    ],
+                    "cwe": [
+                        "CWE-319: Cleartext Transmission of Sensitive Information"
+                    ],
+                    "owasp": [
+                        "A03:2017 - Sensitive Data Exposure",
+                        "A02:2021 - Cryptographic Failures",
+                        "A04:2025 - Cryptographic Failures"
+                    ],
+                    "confidence": "HIGH",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "references": [
+                        "https://cwe.mitre.org/data/definitions/319.html"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                    "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "www/index.html",
+            "start": {
+                "line": 35,
+                "col": 3,
+                "offset": 1203
+            },
+            "end": {
+                "line": 35,
+                "col": 60,
+                "offset": 1260
+            },
+            "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                    "category": "security",
+                    "technology": [
+                        "html"
+                    ],
+                    "cwe": [
+                        "CWE-319: Cleartext Transmission of Sensitive Information"
+                    ],
+                    "owasp": [
+                        "A03:2017 - Sensitive Data Exposure",
+                        "A02:2021 - Cryptographic Failures",
+                        "A04:2025 - Cryptographic Failures"
+                    ],
+                    "confidence": "HIGH",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "references": [
+                        "https://cwe.mitre.org/data/definitions/319.html"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                    "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "www/index.html",
+            "start": {
+                "line": 52,
+                "col": 3,
+                "offset": 1879
+            },
+            "end": {
+                "line": 52,
+                "col": 50,
+                "offset": 1926
+            },
+            "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                    "category": "security",
+                    "technology": [
+                        "html"
+                    ],
+                    "cwe": [
+                        "CWE-319: Cleartext Transmission of Sensitive Information"
+                    ],
+                    "owasp": [
+                        "A03:2017 - Sensitive Data Exposure",
+                        "A02:2021 - Cryptographic Failures",
+                        "A04:2025 - Cryptographic Failures"
+                    ],
+                    "confidence": "HIGH",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "references": [
+                        "https://cwe.mitre.org/data/definitions/319.html"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                    "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "www/index.html",
+            "start": {
+                "line": 54,
+                "col": 3,
+                "offset": 1984
+            },
+            "end": {
+                "line": 54,
+                "col": 54,
+                "offset": 2035
+            },
+            "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                    "category": "security",
+                    "technology": [
+                        "html"
+                    ],
+                    "cwe": [
+                        "CWE-319: Cleartext Transmission of Sensitive Information"
+                    ],
+                    "owasp": [
+                        "A03:2017 - Sensitive Data Exposure",
+                        "A02:2021 - Cryptographic Failures",
+                        "A04:2025 - Cryptographic Failures"
+                    ],
+                    "confidence": "HIGH",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "references": [
+                        "https://cwe.mitre.org/data/definitions/319.html"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                    "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "html.security.plaintext-http-link.plaintext-http-link",
+            "path": "www/merecat.8.html",
+            "start": {
+                "line": 443,
+                "col": 3,
+                "offset": 24823
+            },
+            "end": {
+                "line": 443,
+                "col": 132,
+                "offset": 24952
+            },
+            "extra": {
+                "message": "This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.",
+                "metadata": {
+                    "category": "security",
+                    "technology": [
+                        "html"
+                    ],
+                    "cwe": [
+                        "CWE-319: Cleartext Transmission of Sensitive Information"
+                    ],
+                    "owasp": [
+                        "A03:2017 - Sensitive Data Exposure",
+                        "A02:2021 - Cryptographic Failures",
+                        "A04:2025 - Cryptographic Failures"
+                    ],
+                    "confidence": "HIGH",
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "references": [
+                        "https://cwe.mitre.org/data/definitions/319.html"
+                    ],
+                    "likelihood": "LOW",
+                    "impact": "LOW",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/html.security.plaintext-http-link.plaintext-http-link",
+                    "shortlink": "https://sg.run/RA5q"
+                },
+                "severity": "WARNING",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        },
+        {
+            "check_id": "php.lang.security.phpinfo-use.phpinfo-use",
+            "path": "www/phpinfo.php",
+            "start": {
+                "line": 2,
+                "col": 1,
+                "offset": 6
+            },
+            "end": {
+                "line": 2,
+                "col": 11,
+                "offset": 16
+            },
+            "extra": {
+                "message": "The 'phpinfo' function may reveal sensitive information about your environment.",
+                "metadata": {
+                    "cwe": [
+                        "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
+                    ],
+                    "references": [
+                        "https://www.php.net/manual/en/function.phpinfo",
+                        "https://github.com/FloeDesignTechnologies/phpcs-security-audit/blob/master/Security/Sniffs/BadFunctions/PhpinfosSniff.php"
+                    ],
+                    "category": "security",
+                    "technology": [
+                        "php"
+                    ],
+                    "owasp": [
+                        "A01:2021 - Broken Access Control",
+                        "A01:2025 - Broken Access Control"
+                    ],
+                    "cwe2021-top25": true,
+                    "subcategory": [
+                        "vuln"
+                    ],
+                    "likelihood": "MEDIUM",
+                    "impact": "MEDIUM",
+                    "confidence": "MEDIUM",
+                    "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+                    "vulnerability_class": [
+                        "Mishandled Sensitive Information"
+                    ],
+                    "source": "https://semgrep.dev/r/php.lang.security.phpinfo-use.phpinfo-use",
+                    "shortlink": "https://sg.run/W82E"
+                },
+                "severity": "ERROR",
+                "fingerprint": "requires login",
+                "lines": "requires login",
+                "validation_state": "NO_VALIDATOR",
+                "engine_kind": "OSS"
+            }
+        }
+    ],
+    "errors": [
+        {
+            "code": 3,
+            "level": "warn",
+            "type": "Syntax error",
+            "message": "Syntax error at line src/merecat.h:1:\n `/* Configuration defines for merecat and libhttpd\n**\n** Copyright (C) 1995-2015  Jef Poskanzer <jef@mail.acme.com>\n** Copyright (C) 2016-2021  Joachim Wiberg <troglobit@gmail.com>\n** All rights reserved.\n**\n** Redistribution and use in source and binary forms, with or without\n** modification, are permitted provided that the following conditions\n** are met:\n** 1. Redistributions of source code must retain the above copyright\n**    notice, this list of conditions and the following disclaimer.\n** 2. Redistributions in binary form must reproduce the above copyright\n**    notice, this list of conditions and the following disclaimer in the\n**    documentation and/or other materials provided with the distribution.\n**\n** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n** ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNERS OR CONTRIBUTORS BE\n** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n** CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n** SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n** INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n** CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF\n** THE POSSIBILITY OF SUCH DAMAGE.\n*/\n\n#ifndef MERECAT_H_\n#define MERECAT_H_\n\n#include <errno.h>\n#include <stdio.h>\n#include <stdint.h>\n#include <stdlib.h>\n#include <string.h>\n#include <unistd.h>\n\n/* The following configuration settings are sorted in order of decreasing\n** likelihood that you'd want to change them - most likely first, least\n** likely last.\n*/\n\n/* CONFIGURE: Server software version, standard httpd version format.\n** You may want to add a build ID here, but probably not.\n*/\n#define SERVER_SOFTWARE PACKAGE \"/\" VERSION\n\n/* CONFIGURE: CGI programs must m... (truncated 15997 more characters)",
+            "path": "src/merecat.h"
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": "Syntax error",
+            "message": "Syntax error at line src/merecat.c:1:\n `/* Simple, small and fast HTTP server\n**\n** Copyright (C) 1995-2015  Jef Poskanzer <jef@mail.acme.com>\n** Copyright (C) 2016-2021  Joachim Wiberg <troglobit@gmail.com>\n** All rights reserved.\n**\n** Redistribution and use in source and binary forms, with or without\n** modification, are permitted provided that the following conditions\n** are met:\n** 1. Redistributions of source code must retain the above copyright\n**    notice, this list of conditions and the following disclaimer.\n** 2. Redistributions in binary form must reproduce the above copyright\n**    notice, this list of conditions and the following disclaimer in the\n**    documentation and/or other materials provided with the distribution.\n**\n** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n** ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNERS OR CONTRIBUTORS BE\n** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n** CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n** SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n** INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n** CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF\n** THE POSSIBILITY OF SUCH DAMAGE.\n*/\n\n#include <config.h>\n\n#include <getopt.h>\n#include <pwd.h>\n#ifdef HAVE_GRP_H\n#include <grp.h>\n#endif\n#include <stdio.h>\n#include <signal.h>\n\n#define SYSLOG_NAMES\n#include <syslog.h>\n\n#include <sys/param.h>\n#include <sys/types.h>\n#include <sys/stat.h>\n#include <sys/wait.h>\n#include <sys/uio.h>\n\n#ifdef HAVE_ZLIB_H\n#include <zlib.h>\n#endif\n\n#include \"conf.h\"\n#include \"fdwatch.h\"\n#include \"libhttpd.h\"\n#include \"match.h\"\n#include \"mmc.h\"\n#include \"merecat.h\"\n#include \"srv.h\"\n#include \"ssl.h\"\n#include \"timers.h\"\n\n#ifndef SHUT_WR\n#define SHUT_WR 1... (truncated 43378 more characters)",
+            "path": "src/merecat.c"
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 24,
+                            "col": 75,
+                            "offset": 480
+                        },
+                        "end": {
+                            "line": 24,
+                            "col": 78,
+                            "offset": 483
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line .github/workflows/container.yml:24:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.curl-eval.curl-eval', `${{` was unexpected",
+            "path": ".github/workflows/container.yml",
+            "spans": [
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 24,
+                        "col": 75,
+                        "offset": 480
+                    },
+                    "end": {
+                        "line": 24,
+                        "col": 78,
+                        "offset": 483
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 24,
+                            "col": 75,
+                            "offset": 480
+                        },
+                        "end": {
+                            "line": 24,
+                            "col": 78,
+                            "offset": 483
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line .github/workflows/container.yml:24:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.gha-curl-pipe-shell.gha-curl-pipe-shell', `${{` was unexpected",
+            "path": ".github/workflows/container.yml",
+            "spans": [
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 24,
+                        "col": 75,
+                        "offset": 480
+                    },
+                    "end": {
+                        "line": 24,
+                        "col": 78,
+                        "offset": 483
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 26,
+                            "col": 32,
+                            "offset": 617
+                        },
+                        "end": {
+                            "line": 26,
+                            "col": 35,
+                            "offset": 620
+                        }
+                    },
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 30,
+                            "col": 19,
+                            "offset": 617
+                        },
+                        "end": {
+                            "line": 30,
+                            "col": 31,
+                            "offset": 629
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line .github/workflows/container.yml:26:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.curl-eval.curl-eval', `${{` was unexpected",
+            "path": ".github/workflows/container.yml",
+            "spans": [
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 26,
+                        "col": 32,
+                        "offset": 617
+                    },
+                    "end": {
+                        "line": 26,
+                        "col": 35,
+                        "offset": 620
+                    }
+                },
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 30,
+                        "col": 19,
+                        "offset": 617
+                    },
+                    "end": {
+                        "line": 30,
+                        "col": 31,
+                        "offset": 629
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 26,
+                            "col": 32,
+                            "offset": 617
+                        },
+                        "end": {
+                            "line": 26,
+                            "col": 35,
+                            "offset": 620
+                        }
+                    },
+                    {
+                        "path": ".github/workflows/container.yml",
+                        "start": {
+                            "line": 30,
+                            "col": 19,
+                            "offset": 617
+                        },
+                        "end": {
+                            "line": 30,
+                            "col": 31,
+                            "offset": 629
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line .github/workflows/container.yml:26:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.gha-curl-pipe-shell.gha-curl-pipe-shell', `${{` was unexpected",
+            "path": ".github/workflows/container.yml",
+            "spans": [
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 26,
+                        "col": 32,
+                        "offset": 617
+                    },
+                    "end": {
+                        "line": 26,
+                        "col": 35,
+                        "offset": 620
+                    }
+                },
+                {
+                    "file": ".github/workflows/container.yml",
+                    "start": {
+                        "line": 30,
+                        "col": 19,
+                        "offset": 617
+                    },
+                    "end": {
+                        "line": 30,
+                        "col": 31,
+                        "offset": 629
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "src/fdwatch.c",
+                        "start": {
+                            "line": 489,
+                            "col": 64,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 489,
+                            "col": 70,
+                            "offset": 6
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line src/fdwatch.c:489:\n `pollfd` was unexpected",
+            "path": "src/fdwatch.c",
+            "spans": [
+                {
+                    "file": "src/fdwatch.c",
+                    "start": {
+                        "line": 489,
+                        "col": 64,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 489,
+                        "col": 70,
+                        "offset": 6
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "src/htpasswd.c",
+                        "start": {
+                            "line": 179,
+                            "col": 36,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 179,
+                            "col": 44,
+                            "offset": 8
+                        }
+                    },
+                    {
+                        "path": "src/htpasswd.c",
+                        "start": {
+                            "line": 184,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 184,
+                            "col": 22,
+                            "offset": 9
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line src/htpasswd.c:179:\n `template` was unexpected",
+            "path": "src/htpasswd.c",
+            "spans": [
+                {
+                    "file": "src/htpasswd.c",
+                    "start": {
+                        "line": 179,
+                        "col": 36,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 179,
+                        "col": 44,
+                        "offset": 8
+                    }
+                },
+                {
+                    "file": "src/htpasswd.c",
+                    "start": {
+                        "line": 184,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 184,
+                        "col": 22,
+                        "offset": 9
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 364,
+                            "col": 17,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 364,
+                            "col": 23,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 397,
+                            "col": 12,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 397,
+                            "col": 18,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 451,
+                            "col": 18,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 451,
+                            "col": 23,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 814,
+                            "col": 31,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 814,
+                            "col": 37,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 826,
+                            "col": 52,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 826,
+                            "col": 58,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 913,
+                            "col": 14,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 913,
+                            "col": 19,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 920,
+                            "col": 22,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 920,
+                            "col": 27,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 2916,
+                            "col": 57,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2916,
+                            "col": 58,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3079,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3079,
+                            "col": 2,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3162,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3162,
+                            "col": 9,
+                            "offset": 8
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3168,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3168,
+                            "col": 9,
+                            "offset": 8
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3361,
+                            "col": 2,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3361,
+                            "col": 23,
+                            "offset": 21
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3363,
+                            "col": 3,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3365,
+                            "col": 15,
+                            "offset": 31
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3369,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3369,
+                            "col": 6,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3371,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3371,
+                            "col": 7,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3373,
+                            "col": 2,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3373,
+                            "col": 3,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3451,
+                            "col": 17,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3451,
+                            "col": 22,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3452,
+                            "col": 20,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3452,
+                            "col": 27,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3455,
+                            "col": 26,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3455,
+                            "col": 31,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3456,
+                            "col": 32,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3456,
+                            "col": 39,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3782,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3782,
+                            "col": 18,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3802,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3802,
+                            "col": 18,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3912,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3912,
+                            "col": 20,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 4891,
+                            "col": 34,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 4891,
+                            "col": 37,
+                            "offset": 3
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line src/libhttpd.c:364:\n `struct` was unexpected",
+            "path": "src/libhttpd.c",
+            "spans": [
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 364,
+                        "col": 17,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 364,
+                        "col": 23,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 397,
+                        "col": 12,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 397,
+                        "col": 18,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 451,
+                        "col": 18,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 451,
+                        "col": 23,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 814,
+                        "col": 31,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 814,
+                        "col": 37,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 826,
+                        "col": 52,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 826,
+                        "col": 58,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 913,
+                        "col": 14,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 913,
+                        "col": 19,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 920,
+                        "col": 22,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 920,
+                        "col": 27,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 2916,
+                        "col": 57,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2916,
+                        "col": 58,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3079,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3079,
+                        "col": 2,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3162,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3162,
+                        "col": 9,
+                        "offset": 8
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3168,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3168,
+                        "col": 9,
+                        "offset": 8
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3361,
+                        "col": 2,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3361,
+                        "col": 23,
+                        "offset": 21
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3363,
+                        "col": 3,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3365,
+                        "col": 15,
+                        "offset": 31
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3369,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3369,
+                        "col": 6,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3371,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3371,
+                        "col": 7,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3373,
+                        "col": 2,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3373,
+                        "col": 3,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3451,
+                        "col": 17,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3451,
+                        "col": 22,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3452,
+                        "col": 20,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3452,
+                        "col": 27,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3455,
+                        "col": 26,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3455,
+                        "col": 31,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3456,
+                        "col": 32,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3456,
+                        "col": 39,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3782,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3782,
+                        "col": 18,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3802,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3802,
+                        "col": 18,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3912,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3912,
+                        "col": 20,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 4891,
+                        "col": 34,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 4891,
+                        "col": 37,
+                        "offset": 3
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "www/footer.html",
+                        "start": {
+                            "line": 8,
+                            "col": 3,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 10,
+                            "col": 8,
+                            "offset": 22
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line www/footer.html:8:\n `</div>\n</body>\n</html>` was unexpected",
+            "path": "www/footer.html",
+            "spans": [
+                {
+                    "file": "www/footer.html",
+                    "start": {
+                        "line": 8,
+                        "col": 3,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 10,
+                        "col": 8,
+                        "offset": 22
+                    }
+                }
+            ]
+        },
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "www/header.html",
+                        "start": {
+                            "line": 2,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 11,
+                            "col": 21,
+                            "offset": 294
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line www/header.html:2:\n `<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=viewport content=\"width=device-width, initial-scale=0.8\">\n  <title>%TITLE%</title>\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\">\n  <link rel=\"icon\" type=\"image/x-icon\" href=\"/icons/favicon.ico\">\n</head>\n<body>\n  <div id=\"wrapper\">` was unexpected",
+            "path": "www/header.html",
+            "spans": [
+                {
+                    "file": "www/header.html",
+                    "start": {
+                        "line": 2,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 11,
+                        "col": 21,
+                        "offset": 294
+                    }
+                }
+            ]
+        }
+    ],
+    "paths": {
+        "scanned": [
+            ".github/SECURITY.md",
+            ".github/workflows/build.yml",
+            ".github/workflows/codeql-analysis.yml",
+            ".github/workflows/container.yml",
+            ".github/workflows/coverity.yml",
+            ".github/workflows/release.yml",
+            ".gitignore",
+            ".pc/.quilt_patches",
+            ".pc/.quilt_series",
+            ".pc/.version",
+            ".pc/applied-patches",
+            "ChangeLog.md",
+            "Dockerfile",
+            "LICENSE",
+            "Makefile.am",
+            "README.md",
+            "autogen.sh",
+            "build.sh",
+            "configure.ac",
+            "debian/changelog",
+            "debian/control",
+            "debian/copyright",
+            "debian/docs",
+            "debian/install",
+            "debian/merecat.links",
+            "debian/merecat.lintian-overrides",
+            "debian/merecat.postinst",
+            "debian/rules",
+            "debian/source/format",
+            "debian/source/include-binaries",
+            "debian/upstream/metadata",
+            "debian/watch",
+            "doc/README.thttpd",
+            "doc/TODO",
+            "doc/cgi.txt",
+            "lib/.gitignore",
+            "lib/lstat.c",
+            "lib/malloc.c",
+            "lib/realloc.c",
+            "lib/strlcat.c",
+            "lib/strlcpy.c",
+            "lib/tempfile.c",
+            "man/Makefile.am",
+            "man/htpasswd.1",
+            "man/merecat.8",
+            "man/merecat.conf.5",
+            "man/ssi.8",
+            "man.sh",
+            "merecat.conf",
+            "merecat.service.in",
+            "results.txt",
+            "run.sh",
+            "src/.gitignore",
+            "src/Makefile.am",
+            "src/base64.c",
+            "src/base64.h",
+            "src/conf.c",
+            "src/conf.h",
+            "src/fdwatch.c",
+            "src/fdwatch.h",
+            "src/file.c",
+            "src/file.h",
+            "src/htpasswd.c",
+            "src/libhttpd.c",
+            "src/libhttpd.h",
+            "src/make_mime.pl",
+            "src/match.c",
+            "src/match.h",
+            "src/md5.c",
+            "src/md5.h",
+            "src/merecat.c",
+            "src/merecat.h",
+            "src/mime_encodings.h",
+            "src/mime_encodings.txt",
+            "src/mime_types.h",
+            "src/mime_types.txt",
+            "src/mmc.c",
+            "src/mmc.h",
+            "src/pidfile.c",
+            "src/srv.c",
+            "src/srv.h",
+            "src/ssl.c",
+            "src/ssl.h",
+            "src/stack.c",
+            "src/tdate_parse.c",
+            "src/tdate_parse.h",
+            "src/timers.c",
+            "src/timers.h",
+            "throttle.conf",
+            "www/.gitignore",
+            "www/Makefile.am",
+            "www/cgi-bin/.gitignore",
+            "www/cgi-bin/Makefile.am",
+            "www/cgi-bin/printenv",
+            "www/cgi-bin/ssi.c",
+            "www/footer.html",
+            "www/header.html",
+            "www/htpasswd.1.html",
+            "www/icons/Makefile.am",
+            "www/img/Makefile.am",
+            "www/index.html",
+            "www/main.css",
+            "www/merecat.8.html",
+            "www/merecat.conf.5.html",
+            "www/phpinfo.php",
+            "www/ssi.8.html",
+            "www/test.php"
+        ]
+    },
+    "time": {
+        "rules": [],
+        "rules_parse_time": 0.17443490028381348,
+        "profiling_times": {
+            "config_time": 1.3605072498321533,
+            "core_time": 0.7647650241851807,
+            "ignores_time": 0.0007431507110595703,
+            "total_time": 2.133373975753784
+        },
+        "parsing_time": {
+            "total_time": 0.0,
+            "per_file_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "scanning_time": {
+            "total_time": 1.2864875793457031,
+            "per_file_time": {
+                "mean": 0.0046952101435974595,
+                "std_dev": 0.00027083473220146994
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "matching_time": {
+            "total_time": 0.0,
+            "per_file_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_files": []
+        },
+        "tainting_time": {
+            "total_time": 0.0,
+            "per_def_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_defs": []
+        },
+        "fixpoint_timeouts": [],
+        "prefiltering": {
+            "project_level_time": 0.0,
+            "file_level_time": 0.0,
+            "rules_with_project_prefilters_ratio": 0.0,
+            "rules_with_file_prefilters_ratio": 0.9677131644666429,
+            "rules_selected_ratio": 0.04174099179450589,
+            "rules_matched_ratio": 0.04174099179450589
+        },
+        "targets": [],
+        "total_bytes": 0,
+        "max_memory_bytes": 874726464
+    },
+    "engine_requested": "OSS",
+    "skipped_rules": [],
+    "profiling_results": []
+}
