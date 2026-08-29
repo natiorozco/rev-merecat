@@ -1,0 +1,162 @@
+                    
+                    
+┌──────────────────┐
+│ 23 Code Findings │
+└──────────────────┘
+                                              
+  [36m[22m[24m  .github/workflows/build.yml[0m
+    ❯❱ [1myaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can
+          be silently repointed by the action owner, enabling supply-chain attacks — as seen in
+          the trivy-action and kics-github-action compromises. Pin the reference to a full     
+          40-character commit SHA instead, e.g. `uses:                                         
+          actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.                          
+          Details: https://sg.run/2LgAL                                                        
+                                                                                               
+           31┆ - uses: actions/checkout@v2
+                                                        
+  [36m[22m[24m  .github/workflows/codeql-analysis.yml[0m
+    ❯❱ [1myaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can
+          be silently repointed by the action owner, enabling supply-chain attacks — as seen in
+          the trivy-action and kics-github-action compromises. Pin the reference to a full     
+          40-character commit SHA instead, e.g. `uses:                                         
+          actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.                          
+          Details: https://sg.run/2LgAL                                                        
+                                                                                               
+           41┆ uses: actions/checkout@v2
+            ⋮┆----------------------------------------
+           49┆ uses: github/codeql-action/init@v1
+            ⋮┆----------------------------------------
+           60┆ uses: github/codeql-action/autobuild@v1
+            ⋮┆----------------------------------------
+           74┆ uses: github/codeql-action/analyze@v1
+                                                  
+  [36m[22m[24m  .github/workflows/container.yml[0m
+    ❯❱ [1myaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can
+          be silently repointed by the action owner, enabling supply-chain attacks — as seen in
+          the trivy-action and kics-github-action compromises. Pin the reference to a full     
+          40-character commit SHA instead, e.g. `uses:                                         
+          actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.                          
+          Details: https://sg.run/2LgAL                                                        
+                                                                                               
+           20┆ - uses: actions/checkout@v2
+   
+   ❯❯❱ [1myaml.github-actions.security.run-shell-injection.run-shell-injection[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Using variable interpolation `${{...}}` with `github` context data in a `run:` step    
+          could allow an attacker to inject their own code into the runner. This would allow them
+          to steal secrets and code. `github` context data can have arbitrary user input and     
+          should be treated as untrusted. Instead, use an intermediate environment variable with 
+          `env:` to store the data and use the environment variable in the `run:` script. Be sure
+          to use double-quotes the environment variable, like this: "$ENVVAR".                   
+          Details: https://sg.run/pkzk                                                           
+                                                                                                 
+           26┆ run: |
+           27┆   IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+           28┆   # Change all uppercase to lowercase
+           29┆   IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+           30┆   # Strip git ref prefix from version
+           31┆   VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+           32┆   # Use Docker `latest` tag convention
+           33┆   [ "$VERSION" == "master" ] && VERSION=latest
+           34┆   echo IMAGE_ID=$IMAGE_ID
+           35┆   echo VERSION=$VERSION
+             [hid 2 additional lines, adjust with --max-lines-per-finding] 
+                                                 
+  [36m[22m[24m  .github/workflows/coverity.yml[0m
+    ❯❱ [1myaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can
+          be silently repointed by the action owner, enabling supply-chain attacks — as seen in
+          the trivy-action and kics-github-action compromises. Pin the reference to a full     
+          40-character commit SHA instead, e.g. `uses:                                         
+          actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.                          
+          Details: https://sg.run/2LgAL                                                        
+                                                                                               
+           18┆ - uses: actions/checkout@v2
+            ⋮┆----------------------------------------
+           30┆ - uses: actions/cache@v2
+            ⋮┆----------------------------------------
+           79┆ uses: actions/upload-artifact@v2
+                                                
+  [36m[22m[24m  .github/workflows/release.yml[0m
+    ❯❱ [1myaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can
+          be silently repointed by the action owner, enabling supply-chain attacks — as seen in
+          the trivy-action and kics-github-action compromises. Pin the reference to a full     
+          40-character commit SHA instead, e.g. `uses:                                         
+          actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.                          
+          Details: https://sg.run/2LgAL                                                        
+                                                                                               
+           17┆ - uses: actions/checkout@v2
+            ⋮┆----------------------------------------
+           26┆ uses: actions/create-release@v1
+            ⋮┆----------------------------------------
+           41┆ - uses: actions/checkout@v2
+            ⋮┆----------------------------------------
+           56┆ uses: skx/github-action-publish-binaries@release-0.15
+                             
+  [36m[22m[24m  Dockerfile[0m
+   ❯❯❱ [1mdockerfile.security.missing-user-entrypoint.missing-user-entrypoint[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          By not specifying a USER, a program in the container may run as 'root'. This is a    
+          security hazard. If an attacker can control a process running as root, they may have 
+          control over the container. Ensure that the last USER in a Dockerfile is a USER other
+          than 'root'.                                                                         
+          Details: https://sg.run/k281                                                         
+                                                                                               
+           [32m▶▶┆ Autofix ▶ [0mUSER non-root ENTRYPOINT merecat -p 80 -n /var/www
+           24┆ ENTRYPOINT merecat -p 80 -n /var/www
+                            
+  [36m[22m[24m  src/ssl.c[0m
+    ❯❱ [1mc.lang.security.insecure-use-strtok-fn.insecure-use-strtok-fn[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          Avoid using 'strtok()'. This function directly modifies the first argument buffer,
+          permanently erasing the delimiter character. Use 'strtok_r()' instead.            
+          Details: https://sg.run/LwqG                                                      
+                                                                                            
+          106┆ c = strtok(str, ":");
+            ⋮┆----------------------------------------
+          113┆ c = strtok(NULL, ":");
+                                 
+  [36m[22m[24m  www/index.html[0m
+    ❯❱ [1mhtml.security.plaintext-http-link.plaintext-http-link[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.
+          Details: https://sg.run/RA5q                                                        
+                                                                                              
+           16┆   <a href="http://imgur.com/gallery/Yqty6rI">
+           17┆     <img style="width: 80%; height: auto;"
+           18┆     src="/img/merecat.jpg" width="659" height="494"
+           19┆     title="I think they're kitten suspicious ..."
+           20┆     alt="A mere cat among a group of meerekats" />
+           21┆   </a>
+            ⋮┆----------------------------------------
+           35┆ <a href="http://www.acme.com/software/thttpd/">thttpd</a>.
+            ⋮┆----------------------------------------
+           52┆ <a href="http://www.acme.com">Jef Poskanzer</a> for creating and
+            ⋮┆----------------------------------------
+           54┆ <a href="http://imgur.com/user/SunShot">SunShot</a> for the Mere Cat
+                                     
+  [36m[22m[24m  www/merecat.8.html[0m
+    ❯❱ [1mhtml.security.plaintext-http-link.plaintext-http-link[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          This link points to a plaintext HTTP URL. Prefer an encrypted HTTPS URL if possible.
+          Details: https://sg.run/RA5q                                                        
+                                                                                              
+          443┆ <a class="Lk" title="Lk" href="http://www.acme.com/software/thttpd/notes.html"
+               >http://www.acme.com/software/thttpd/notes.html</a>                           
+                                  
+  [36m[22m[24m  www/phpinfo.php[0m
+   ❯❯❱ [1mphp.lang.security.phpinfo-use.phpinfo-use[0m
+          [31m[1m[24m❰❰ Blocking ❱❱[0m
+          The 'phpinfo' function may reveal sensitive information about your environment.
+          Details: https://sg.run/W82E                                                   
+                                                                                         
+            2┆ phpinfo();
