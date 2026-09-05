@@ -1,0 +1,721 @@
+{
+    "version": "1.175.0",
+    "results": [],
+    "errors": [
+        {
+            "code": 3,
+            "level": "warn",
+            "type": [
+                "PartialParsing",
+                [
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 364,
+                            "col": 17,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 364,
+                            "col": 23,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 397,
+                            "col": 12,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 397,
+                            "col": 18,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 451,
+                            "col": 18,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 451,
+                            "col": 23,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 814,
+                            "col": 31,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 814,
+                            "col": 37,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 826,
+                            "col": 52,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 826,
+                            "col": 58,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 913,
+                            "col": 14,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 913,
+                            "col": 19,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 920,
+                            "col": 22,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 920,
+                            "col": 27,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 2916,
+                            "col": 57,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 2916,
+                            "col": 58,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3079,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3079,
+                            "col": 2,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3162,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3162,
+                            "col": 9,
+                            "offset": 8
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3168,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3168,
+                            "col": 9,
+                            "offset": 8
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3361,
+                            "col": 2,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3361,
+                            "col": 23,
+                            "offset": 21
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3363,
+                            "col": 3,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3365,
+                            "col": 15,
+                            "offset": 31
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3369,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3369,
+                            "col": 6,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3371,
+                            "col": 1,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3371,
+                            "col": 7,
+                            "offset": 6
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3373,
+                            "col": 2,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3373,
+                            "col": 3,
+                            "offset": 1
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3451,
+                            "col": 17,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3451,
+                            "col": 22,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3452,
+                            "col": 20,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3452,
+                            "col": 27,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3455,
+                            "col": 26,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3455,
+                            "col": 31,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3456,
+                            "col": 32,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3456,
+                            "col": 39,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3782,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3782,
+                            "col": 18,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3802,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3802,
+                            "col": 18,
+                            "offset": 5
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 3912,
+                            "col": 13,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 3912,
+                            "col": 20,
+                            "offset": 7
+                        }
+                    },
+                    {
+                        "path": "src/libhttpd.c",
+                        "start": {
+                            "line": 4891,
+                            "col": 34,
+                            "offset": 0
+                        },
+                        "end": {
+                            "line": 4891,
+                            "col": 37,
+                            "offset": 3
+                        }
+                    }
+                ]
+            ],
+            "message": "Syntax error at line src/libhttpd.c:364:\n `struct` was unexpected",
+            "path": "src/libhttpd.c",
+            "spans": [
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 364,
+                        "col": 17,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 364,
+                        "col": 23,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 397,
+                        "col": 12,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 397,
+                        "col": 18,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 451,
+                        "col": 18,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 451,
+                        "col": 23,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 814,
+                        "col": 31,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 814,
+                        "col": 37,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 826,
+                        "col": 52,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 826,
+                        "col": 58,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 913,
+                        "col": 14,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 913,
+                        "col": 19,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 920,
+                        "col": 22,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 920,
+                        "col": 27,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 2916,
+                        "col": 57,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2916,
+                        "col": 58,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3079,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3079,
+                        "col": 2,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3162,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3162,
+                        "col": 9,
+                        "offset": 8
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3168,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3168,
+                        "col": 9,
+                        "offset": 8
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3361,
+                        "col": 2,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3361,
+                        "col": 23,
+                        "offset": 21
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3363,
+                        "col": 3,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3365,
+                        "col": 15,
+                        "offset": 31
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3369,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3369,
+                        "col": 6,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3371,
+                        "col": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3371,
+                        "col": 7,
+                        "offset": 6
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3373,
+                        "col": 2,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3373,
+                        "col": 3,
+                        "offset": 1
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3451,
+                        "col": 17,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3451,
+                        "col": 22,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3452,
+                        "col": 20,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3452,
+                        "col": 27,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3455,
+                        "col": 26,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3455,
+                        "col": 31,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3456,
+                        "col": 32,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3456,
+                        "col": 39,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3782,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3782,
+                        "col": 18,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3802,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3802,
+                        "col": 18,
+                        "offset": 5
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 3912,
+                        "col": 13,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 3912,
+                        "col": 20,
+                        "offset": 7
+                    }
+                },
+                {
+                    "file": "src/libhttpd.c",
+                    "start": {
+                        "line": 4891,
+                        "col": 34,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 4891,
+                        "col": 37,
+                        "offset": 3
+                    }
+                }
+            ]
+        }
+    ],
+    "paths": {
+        "scanned": [
+            "src/libhttpd.c"
+        ]
+    },
+    "time": {
+        "rules": [],
+        "rules_parse_time": 0.1737351417541504,
+        "profiling_times": {
+            "config_time": 2.367737054824829,
+            "core_time": 0.4484140872955322,
+            "ignores_time": 0.0005183219909667969,
+            "total_time": 2.8216493129730225
+        },
+        "parsing_time": {
+            "total_time": 0.0,
+            "per_file_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "scanning_time": {
+            "total_time": 0.17014312744140625,
+            "per_file_time": {
+                "mean": 0.056714375813802086,
+                "std_dev": 0.002809218989808768
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_files": []
+        },
+        "matching_time": {
+            "total_time": 0.0,
+            "per_file_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_files": []
+        },
+        "tainting_time": {
+            "total_time": 0.0,
+            "per_def_and_rule_time": {
+                "mean": 0.0,
+                "std_dev": 0.0
+            },
+            "very_slow_stats": {
+                "time_ratio": 0.0,
+                "count_ratio": 0.0
+            },
+            "very_slow_rules_on_defs": []
+        },
+        "fixpoint_timeouts": [],
+        "prefiltering": {
+            "project_level_time": 0.0,
+            "file_level_time": 0.0,
+            "rules_with_project_prefilters_ratio": 0.0,
+            "rules_with_file_prefilters_ratio": 1.0,
+            "rules_selected_ratio": 0.057692307692307696,
+            "rules_matched_ratio": 0.057692307692307696
+        },
+        "targets": [],
+        "total_bytes": 0,
+        "max_memory_bytes": 825478656
+    },
+    "engine_requested": "OSS",
+    "skipped_rules": [],
+    "profiling_results": []
+}
